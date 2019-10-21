@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0580130A235E6C3200BDC9A3 /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05801308235E6C3200BDC9A3 /* User.xcdatamodeld */; };
+		0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */; };
+		0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */; };
+		05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580130F235E6CF000BDC9A3 /* SignInViewController.swift */; };
 		320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1D235E4991003D1BE4 /* AppDelegate.swift */; };
 		320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */; };
 		320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */; };
-		320ACB28235E4991003D1BE4 /* Kids_Fly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */; };
 		320ACB2A235E4992003D1BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB29235E4992003D1BE4 /* Assets.xcassets */; };
 		320ACB2D235E4992003D1BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB2B235E4992003D1BE4 /* LaunchScreen.storyboard */; };
 		320ACB3A235E4B64003D1BE4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB39235E4B64003D1BE4 /* Lato-Regular.ttf */; };
@@ -21,11 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05801309235E6C3200BDC9A3 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
+		0580130F235E6CF000BDC9A3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		320ACB1A235E4991003D1BE4 /* Kids Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320ACB1D235E4991003D1BE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		320ACB24235E4991003D1BE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BookATripMain.storyboard; sourceTree = "<group>"; };
-		320ACB27235E4991003D1BE4 /* Kids_Fly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kids_Fly.xcdatamodel; sourceTree = "<group>"; };
 		320ACB29235E4992003D1BE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		320ACB2C235E4992003D1BE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320ACB2E235E4992003D1BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */,
+				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -110,7 +117,9 @@
 		320ACB37235E49D1003D1BE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */,
+				05801308235E6C3200BDC9A3 /* User.xcdatamodeld */,
+				0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */,
+				0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0580130A235E6C3200BDC9A3 /* User.xcdatamodeld in Sources */,
+				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
-				320ACB28235E4991003D1BE4 /* Kids_Fly.xcdatamodeld in Sources */,
+				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
+				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
 			);
@@ -400,13 +412,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */ = {
+		05801308235E6C3200BDC9A3 /* User.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				320ACB27235E4991003D1BE4 /* Kids_Fly.xcdatamodel */,
+				05801309235E6C3200BDC9A3 /* User.xcdatamodel */,
 			);
-			currentVersion = 320ACB27235E4991003D1BE4 /* Kids_Fly.xcdatamodel */;
-			path = Kids_Fly.xcdatamodeld;
+			currentVersion = 05801309235E6C3200BDC9A3 /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

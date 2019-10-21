@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 struct UserRepresentation: Codable {
     let email: String
     let password: String
