@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05CB1E94235E551F005B3A36 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB1E93235E551F005B3A36 /* CoreDataStack.swift */; };
+		05CB1E96235E55FC005B3A36 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB1E95235E55FC005B3A36 /* UserRepresentation.swift */; };
+		05CB1E98235E575E005B3A36 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB1E97235E575E005B3A36 /* SignInViewController.swift */; };
 		320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1D235E4991003D1BE4 /* AppDelegate.swift */; };
 		320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */; };
 		320ACB22235E4991003D1BE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB21235E4991003D1BE4 /* ViewController.swift */; };
 		320ACB25235E4991003D1BE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB23235E4991003D1BE4 /* Main.storyboard */; };
-		320ACB28235E4991003D1BE4 /* Kids_Fly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */; };
+		320ACB28235E4991003D1BE4 /* Users.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB26235E4991003D1BE4 /* Users.xcdatamodeld */; };
 		320ACB2A235E4992003D1BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB29235E4992003D1BE4 /* Assets.xcassets */; };
 		320ACB2D235E4992003D1BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB2B235E4992003D1BE4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05CB1E93235E551F005B3A36 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		05CB1E95235E55FC005B3A36 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
+		05CB1E97235E575E005B3A36 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		320ACB1A235E4991003D1BE4 /* Kids Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320ACB1D235E4991003D1BE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB21235E4991003D1BE4 /* ViewController.swift */,
+				05CB1E97235E575E005B3A36 /* SignInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -98,7 +105,9 @@
 		320ACB37235E49D1003D1BE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */,
+				320ACB26235E4991003D1BE4 /* Users.xcdatamodeld */,
+				05CB1E93235E551F005B3A36 /* CoreDataStack.swift */,
+				05CB1E95235E55FC005B3A36 /* UserRepresentation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CB1E98235E575E005B3A36 /* SignInViewController.swift in Sources */,
+				05CB1E94235E551F005B3A36 /* CoreDataStack.swift in Sources */,
+				05CB1E96235E55FC005B3A36 /* UserRepresentation.swift in Sources */,
 				320ACB22235E4991003D1BE4 /* ViewController.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
-				320ACB28235E4991003D1BE4 /* Kids_Fly.xcdatamodeld in Sources */,
+				320ACB28235E4991003D1BE4 /* Users.xcdatamodeld in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,13 +396,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		320ACB26235E4991003D1BE4 /* Kids_Fly.xcdatamodeld */ = {
+		320ACB26235E4991003D1BE4 /* Users.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				320ACB27235E4991003D1BE4 /* Kids_Fly.xcdatamodel */,
 			);
 			currentVersion = 320ACB27235E4991003D1BE4 /* Kids_Fly.xcdatamodel */;
-			path = Kids_Fly.xcdatamodeld;
+			path = Users.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
