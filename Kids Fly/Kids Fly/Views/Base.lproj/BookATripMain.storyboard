@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-bT-0Ri">
-                                <rect key="frame" x="364" y="109" width="30" height="22"/>
+                                <rect key="frame" x="364" y="109" width="30" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="XHB-c0-RLa"/>
                                 </constraints>
@@ -60,19 +60,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Anna!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-8x-78d">
-                                <rect key="frame" x="108" y="201" width="92.5" height="29"/>
+                                <rect key="frame" x="108" y="201" width="91" height="28"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book a trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jou-NF-ISP">
-                                <rect key="frame" x="20" y="271" width="103" height="25.5"/>
+                                <rect key="frame" x="20" y="271" width="103" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-4i-Adm">
-                                <rect key="frame" x="20" y="304.5" width="374" height="90"/>
+                                <rect key="frame" x="20" y="303.5" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7yg-CY-loE"/>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOD-rC-OM1">
-                                <rect key="frame" x="20" y="470" width="374" height="343"/>
+                                <rect key="frame" x="20" y="468" width="374" height="345"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzZ-1O-ZBH">
                                     <size key="itemSize" width="343" height="90"/>
@@ -107,7 +107,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBeach" translatesAutoresizingMaskIntoConstraints="NO" id="oS3-3Q-dWN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90.000000000000057"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,7 +153,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-dt-u5W">
-                                <rect key="frame" x="20" y="424.5" width="145.5" height="25.5"/>
+                                <rect key="frame" x="20" y="423.5" width="148" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -655,6 +655,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hrK-1w-x44" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bg9-i1-3Ak">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
