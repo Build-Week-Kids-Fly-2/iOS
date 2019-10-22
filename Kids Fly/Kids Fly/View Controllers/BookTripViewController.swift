@@ -27,8 +27,7 @@ class BookTripViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDropDowns()
-        serviceAirportTextField.delegate = self
-        numberOfTravelersTextField.delegate = self
+        setUpTextFields()
     }
     
     // MARK: - IBActions & Methods
@@ -43,6 +42,13 @@ class BookTripViewController: UIViewController {
         dropDownNumberOfTravelers.dismissMode = .automatic
         dropDownNumberOfTravelers.dataSource = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         
+    }
+    
+    func setUpTextFields() {
+        serviceAirportTextField.delegate = self
+        numberOfTravelersTextField.delegate = self
+        dateTextField.delegate = self
+        timeTextField.delegate = self
     }
     
     @IBAction func planTripButtonTapped(_ sender: Any) {
@@ -74,7 +80,8 @@ extension BookTripViewController:UITextFieldDelegate {
             dropDownNumberOfTravelers.selectionAction = { (index: Int, item: String) in
                 self.numberOfTravelersTextField.text = item
             }
-        
+        case dateTextField:
+            performSegue(withIdentifier: "ShowDatePicker", sender: self)
         default:
             break
         }

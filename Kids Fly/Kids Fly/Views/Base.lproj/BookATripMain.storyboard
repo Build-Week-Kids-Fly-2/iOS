@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-bT-0Ri">
-                                <rect key="frame" x="364" y="109" width="30" height="40"/>
+                                <rect key="frame" x="364" y="109" width="30" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="XHB-c0-RLa"/>
                                 </constraints>
@@ -63,19 +63,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Anna!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-8x-78d">
-                                <rect key="frame" x="108" y="201" width="91" height="28"/>
+                                <rect key="frame" x="108" y="201" width="92.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book a trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jou-NF-ISP">
-                                <rect key="frame" x="20" y="271" width="103" height="24.5"/>
+                                <rect key="frame" x="20" y="271" width="103" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-4i-Adm">
-                                <rect key="frame" x="20" y="303.5" width="374" height="90"/>
+                                <rect key="frame" x="20" y="304.5" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7yg-CY-loE"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOD-rC-OM1">
-                                <rect key="frame" x="20" y="468" width="374" height="345"/>
+                                <rect key="frame" x="20" y="470" width="374" height="343"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzZ-1O-ZBH">
                                     <size key="itemSize" width="343" height="90"/>
@@ -110,7 +110,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBeach" translatesAutoresizingMaskIntoConstraints="NO" id="oS3-3Q-dWN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90.000000000000057"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,7 +156,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-dt-u5W">
-                                <rect key="frame" x="20" y="423.5" width="148" height="24.5"/>
+                                <rect key="frame" x="20" y="424.5" width="145.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -220,7 +220,92 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIH-gj-Y5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138" y="-388"/>
+            <point key="canvasLocation" x="4417" y="759"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="ygS-Vv-eJN">
+            <objects>
+                <viewController id="uoY-kq-4s7" customClass="DatePickerViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U52-lA-AbK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-IV-6HX" userLabel="PickerView">
+                                <rect key="frame" x="0.0" y="501" width="414" height="341"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8k-uZ-TND">
+                                        <rect key="frame" x="364" y="20" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="v0N-Cs-f9C"/>
+                                            <constraint firstAttribute="width" constant="30" id="vCy-rh-0tR"/>
+                                        </constraints>
+                                        <state key="normal" title="x" backgroundImage="XBackground">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="uoY-kq-4s7" eventType="touchUpInside" id="HaZ-H5-Cha"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLd-eZ-Eq2">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="593475168.50021505">
+                                            <!--2019-10-22 22:12:48 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X27-Df-0bT">
+                                        <rect key="frame" x="274" y="270" width="120" height="31"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.79215686269999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="R2d-5G-a3K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                        <state key="normal" title="Select Date">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SelectDateTapped:" destination="uoY-kq-4s7" eventType="touchUpInside" id="TWc-RW-W0s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="S8k-uZ-TND" secondAttribute="trailing" constant="20" id="B7q-dh-ad7"/>
+                                    <constraint firstItem="X27-Df-0bT" firstAttribute="top" secondItem="hLd-eZ-Eq2" secondAttribute="bottom" constant="8" id="Bmc-3Z-4QY"/>
+                                    <constraint firstItem="hLd-eZ-Eq2" firstAttribute="leading" secondItem="yDG-IV-6HX" secondAttribute="leading" id="H42-XF-MOD"/>
+                                    <constraint firstAttribute="height" constant="341" id="KOH-3A-NdW"/>
+                                    <constraint firstAttribute="trailing" secondItem="X27-Df-0bT" secondAttribute="trailing" constant="20" id="LYo-kY-6Ah"/>
+                                    <constraint firstItem="S8k-uZ-TND" firstAttribute="top" secondItem="yDG-IV-6HX" secondAttribute="top" constant="20" id="Sxx-gm-kli"/>
+                                    <constraint firstAttribute="trailing" secondItem="hLd-eZ-Eq2" secondAttribute="trailing" id="lhK-HU-now"/>
+                                    <constraint firstAttribute="bottom" secondItem="X27-Df-0bT" secondAttribute="bottom" constant="40" id="uQv-YJ-SF2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yDG-IV-6HX" firstAttribute="leading" secondItem="DPq-Jg-Qn7" secondAttribute="leading" id="CTo-zX-jvI"/>
+                            <constraint firstAttribute="bottom" secondItem="yDG-IV-6HX" secondAttribute="bottom" id="OqW-yB-Gia"/>
+                            <constraint firstItem="yDG-IV-6HX" firstAttribute="trailing" secondItem="DPq-Jg-Qn7" secondAttribute="trailing" id="dSN-PV-X4U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DPq-Jg-Qn7"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qXx-0y-rhN" appends="YES" id="9gz-FR-Bey"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="flightDatePicker" destination="hLd-eZ-Eq2" id="oH3-yo-771"/>
+                        <outlet property="modalView" destination="yDG-IV-6HX" id="as5-eN-fgu"/>
+                        <outlet property="selectDateButton" destination="X27-Df-0bT" id="oBf-oU-Ams"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tc5-n9-44T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qXx-0y-rhN">
+                    <connections>
+                        <action selector="clearViewTapped:" destination="uoY-kq-4s7" id="nzd-1y-nqb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3769.5652173913045" y="-609.375"/>
         </scene>
         <!--Book Trip View Controller-->
         <scene sceneID="DWF-lK-Z1Q">
@@ -257,16 +342,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-mD-FQV">
-                                <rect key="frame" x="90" y="212" width="234" height="63"/>
+                                <rect key="frame" x="90" y="212" width="234" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehk-Ph-jgQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="93" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-7q-B59">
-                                        <rect key="frame" x="0.0" y="29" width="234" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -280,16 +365,19 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aTJ-xT-s1k">
-                                <rect key="frame" x="90" y="315" width="234" height="63"/>
+                                <rect key="frame" x="90" y="314.5" width="234" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Travelers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-kd-Jxt">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0n-zI-tzA">
-                                        <rect key="frame" x="0.0" y="29" width="234" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="234" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -303,18 +391,21 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ygx-sE-Ha0">
-                                <rect key="frame" x="90" y="418" width="234" height="63"/>
+                                <rect key="frame" x="90" y="417" width="234" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-bF-d6D">
-                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TxB-el-1jq">
-                                        <rect key="frame" x="0.0" y="29" width="234" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <segue destination="uoY-kq-4s7" kind="presentation" identifier="ShowDatePicker" id="UaI-Bu-StF"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -326,16 +417,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QpL-Zx-RJJ">
-                                <rect key="frame" x="90" y="521" width="234" height="63"/>
+                                <rect key="frame" x="90" y="519.5" width="234" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-Sa-8Wn">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3I-rL-5kl">
-                                        <rect key="frame" x="0.0" y="29" width="234" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -349,16 +440,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-yM-Kl3">
-                                <rect key="frame" x="90" y="624" width="234" height="63"/>
+                                <rect key="frame" x="90" y="622" width="234" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-Mj-vxe">
-                                        <rect key="frame" x="0.0" y="0.0" width="89" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPW-Fh-Szn">
-                                        <rect key="frame" x="0.0" y="29" width="234" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -372,7 +463,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3L-I1-sLi">
-                                <rect key="frame" x="110" y="727" width="195" height="44"/>
+                                <rect key="frame" x="110" y="724.5" width="195" height="44"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.792156862745098" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="g9H-wa-XxV"/>
@@ -386,6 +477,11 @@
                                     <segue destination="eU4-yD-pMx" kind="show" id="p90-nl-cx7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-tB-bkx">
+                                <rect key="frame" x="90" y="487" width="234" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -432,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCW-Nj-Ci7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3768.115942028986" y="138.61607142857142"/>
+            <point key="canvasLocation" x="3769.5652173913045" y="138.61607142857142"/>
         </scene>
         <!--Hire View Controller-->
         <scene sceneID="0mf-VX-7Hi">
@@ -731,7 +827,7 @@
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gl3-Gd-uZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4562.3188405797109" y="138.61607142857142"/>
+            <point key="canvasLocation" x="4770" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PUg-uh-tnm">
@@ -745,23 +841,23 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="204"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBeach" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-X1-1bX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.00000000000006"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Your Trip to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XB-pE-ZdI">
-                                        <rect key="frame" x="8" y="40" width="314" height="42"/>
+                                        <rect key="frame" x="8" y="40" width="314" height="43.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="36"/>
                                         <color key="textColor" red="0.87843137250000003" green="0.91764705879999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Auckland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkd-cD-8Hn">
-                                        <rect key="frame" x="8" y="102" width="398" height="35"/>
+                                        <rect key="frame" x="8" y="103.5" width="398" height="36"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
                                         <color key="textColor" red="0.87843137250000003" green="0.91764705879999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="3 December 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-SX-4O2">
-                                        <rect key="frame" x="8" y="145" width="398" height="23"/>
+                                        <rect key="frame" x="8" y="147.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1012,7 +1108,7 @@
                                 <rect key="frame" x="324" y="302" width="50" height="24"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
                                 <state key="normal" title="Cancel Trip">
-                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z60-jB-SaB">
@@ -1063,7 +1159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tck-ik-K4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5392.753623188406" y="138.61607142857142"/>
+            <point key="canvasLocation" x="5674" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AaL-IT-mWw">
@@ -1119,6 +1215,7 @@
         <image name="VectorMenu" width="31" height="20"/>
         <image name="VectorSuitCase" width="16" height="15"/>
         <image name="VectorTime" width="27" height="27"/>
+        <image name="XBackground" width="23" height="20"/>
         <image name="ion-person" width="32" height="32"/>
         <image name="vaadin-familyFamily" width="32" height="32"/>
     </resources>
