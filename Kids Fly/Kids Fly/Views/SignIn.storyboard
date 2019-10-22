@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="9Al-Sz-f05">
+            <objects>
+                <viewController id="BPo-KL-nTY" customClass="SignInViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pcs-uz-L5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Component 1SignIn" translatesAutoresizingMaskIntoConstraints="NO" id="Ipc-M8-nOD">
+                                <rect key="frame" x="36" y="60" width="53" height="98"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-Bk-a9S">
+                                <rect key="frame" x="36" y="162" width="53" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your information below to Sign In with your email or your social accounts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prf-VN-43w">
+                                <rect key="frame" x="36" y="214" width="358" height="43"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dez-6r-ikh">
+                                <rect key="frame" x="259" y="93.5" width="139" height="32"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <segments>
+                                    <segment title="Sign In"/>
+                                    <segment title="Sign Up"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-in-K6r">
+                                <rect key="frame" x="36" y="287" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-PN-v0m">
+                                <rect key="frame" x="36" y="329" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-7N-vLf">
+                                <rect key="frame" x="36" y="377" width="8" height="8"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-Mu-sDv">
+                                <rect key="frame" x="55" y="376" width="58" height="11"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Line 1thinBarLine" translatesAutoresizingMaskIntoConstraints="NO" id="7Bl-GY-pTZ">
+                                <rect key="frame" x="29" y="317" width="358" height="4"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Line 1thinBarLine" translatesAutoresizingMaskIntoConstraints="NO" id="Dcv-8C-8F5">
+                                <rect key="frame" x="36" y="359" width="362" height="4"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Line 1thinBarLine" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-pI-74V">
+                                <rect key="frame" x="90" y="495" width="87" height="4"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-f2-Cac">
+                                <rect key="frame" x="36" y="442" width="362" height="30"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.792156862745098" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqg-pU-bn4">
+                                <rect key="frame" x="196" y="487" width="12" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 1thinBarLine" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-vg-q2I">
+                                <rect key="frame" x="242" y="495" width="87" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aWJ-PN-v0m" firstAttribute="leading" secondItem="L5N-in-K6r" secondAttribute="leading" id="21W-ym-yMd"/>
+                            <constraint firstItem="7Bl-GY-pTZ" firstAttribute="leading" secondItem="L5N-in-K6r" secondAttribute="leading" id="3mP-27-oCL"/>
+                            <constraint firstItem="Bbd-pI-74V" firstAttribute="leading" secondItem="Itj-ql-7JZ" secondAttribute="leading" constant="90" id="4RB-dI-gmd"/>
+                            <constraint firstItem="qiY-Bk-a9S" firstAttribute="top" secondItem="Ipc-M8-nOD" secondAttribute="bottom" constant="45" id="4ms-Uz-8if"/>
+                            <constraint firstItem="dez-6r-ikh" firstAttribute="leading" secondItem="Ipc-M8-nOD" secondAttribute="trailing" constant="170" id="5SN-mc-xYW"/>
+                            <constraint firstItem="QKG-7N-vLf" firstAttribute="leading" secondItem="aWJ-PN-v0m" secondAttribute="leading" id="85U-mY-GUo"/>
+                            <constraint firstItem="L5N-in-K6r" firstAttribute="trailing" secondItem="Prf-VN-43w" secondAttribute="trailing" id="8cc-AL-YiF"/>
+                            <constraint firstItem="2f5-Mu-sDv" firstAttribute="leading" secondItem="QKG-7N-vLf" secondAttribute="trailing" constant="7" id="CDR-7R-849"/>
+                            <constraint firstItem="Ipc-M8-nOD" firstAttribute="top" secondItem="pcs-uz-L5Y" secondAttribute="topMargin" constant="16" id="FuZ-B0-Tur"/>
+                            <constraint firstItem="Dcv-8C-8F5" firstAttribute="trailing" secondItem="7Bl-GY-pTZ" secondAttribute="trailing" id="JK3-Nw-mio"/>
+                            <constraint firstItem="Ipc-M8-nOD" firstAttribute="centerY" secondItem="dez-6r-ikh" secondAttribute="centerY" id="O67-gd-fSf"/>
+                            <constraint firstItem="dYf-f2-Cac" firstAttribute="trailing" secondItem="Dcv-8C-8F5" secondAttribute="trailing" id="OPS-Vu-69o"/>
+                            <constraint firstItem="Bbd-pI-74V" firstAttribute="top" secondItem="dYf-f2-Cac" secondAttribute="bottom" constant="23" id="R3x-bL-ZR1"/>
+                            <constraint firstItem="Prf-VN-43w" firstAttribute="top" secondItem="qiY-Bk-a9S" secondAttribute="bottom" constant="14" id="Rav-O7-Je5"/>
+                            <constraint firstItem="L5N-in-K6r" firstAttribute="top" secondItem="Prf-VN-43w" secondAttribute="bottom" constant="30" id="Tuv-nZ-OfC"/>
+                            <constraint firstItem="QKG-7N-vLf" firstAttribute="centerY" secondItem="2f5-Mu-sDv" secondAttribute="centerY" id="UoX-e1-Mjh"/>
+                            <constraint firstItem="dYf-f2-Cac" firstAttribute="top" secondItem="Dcv-8C-8F5" secondAttribute="bottom" constant="79" id="V9r-6N-vfA"/>
+                            <constraint firstItem="dYf-f2-Cac" firstAttribute="leading" secondItem="Dcv-8C-8F5" secondAttribute="leading" id="WMm-cZ-6tZ"/>
+                            <constraint firstItem="QKG-7N-vLf" firstAttribute="top" secondItem="aWJ-PN-v0m" secondAttribute="bottom" constant="16" id="eAP-MB-TQ4"/>
+                            <constraint firstItem="Prf-VN-43w" firstAttribute="leading" secondItem="qiY-Bk-a9S" secondAttribute="leading" id="eBK-eQ-1br"/>
+                            <constraint firstItem="aWJ-PN-v0m" firstAttribute="trailing" secondItem="L5N-in-K6r" secondAttribute="trailing" id="fI9-Qb-bNy"/>
+                            <constraint firstItem="7Bl-GY-pTZ" firstAttribute="trailing" secondItem="L5N-in-K6r" secondAttribute="trailing" id="fmB-k4-yUk"/>
+                            <constraint firstItem="Itj-ql-7JZ" firstAttribute="trailing" secondItem="dez-6r-ikh" secondAttribute="trailing" constant="16" id="ibz-t5-5a1"/>
+                            <constraint firstItem="L5N-in-K6r" firstAttribute="leading" secondItem="Prf-VN-43w" secondAttribute="leading" id="isy-sv-9Ll"/>
+                            <constraint firstItem="qiY-Bk-a9S" firstAttribute="leading" secondItem="Ipc-M8-nOD" secondAttribute="leading" id="jDH-b1-WXZ"/>
+                            <constraint firstItem="Prf-VN-43w" firstAttribute="trailing" secondItem="dez-6r-ikh" secondAttribute="trailing" id="oGs-KA-NOM"/>
+                            <constraint firstItem="Dcv-8C-8F5" firstAttribute="leading" secondItem="7Bl-GY-pTZ" secondAttribute="leading" id="qT4-C3-ZXF"/>
+                            <constraint firstItem="Ipc-M8-nOD" firstAttribute="leading" secondItem="pcs-uz-L5Y" secondAttribute="leadingMargin" constant="16" id="wle-XE-bRH"/>
+                            <constraint firstItem="aWJ-PN-v0m" firstAttribute="firstBaseline" secondItem="L5N-in-K6r" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="xT6-R1-Qh7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Itj-ql-7JZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ka1-XO-83O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Component 1SignIn" width="53" height="49"/>
+        <image name="Line 1thinBarLine" width="253" height="1"/>
+    </resources>
+</document>
