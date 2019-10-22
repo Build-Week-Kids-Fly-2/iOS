@@ -10,6 +10,10 @@ import UIKit
 
 class BookATripMainViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var hiUserLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +31,16 @@ class BookATripMainViewController: UIViewController {
     }
     */
 
+}
+extension BookATripMainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DestinationCell", for: indexPath) as? DestinationCollectionViewCell else { return UICollectionViewCell() }
+        return cell
+    }
+    
+    
 }

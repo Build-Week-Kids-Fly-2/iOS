@@ -21,6 +21,8 @@
 		320ACB3E235E4B7D003D1BE4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB3D235E4B7D003D1BE4 /* Lato-Bold.ttf */; };
 		320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB3F235E517A003D1BE4 /* CustomColors.swift */; };
 		320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */; };
+		320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */; };
+		320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		320ACB3D235E4B7D003D1BE4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		320ACB3F235E517A003D1BE4 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookATripMainViewController.swift; sourceTree = "<group>"; };
+		320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
+		320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */,
+				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
+				320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */,
 				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
 			);
 			path = "View Controllers";
@@ -208,11 +214,13 @@
 				0580130A235E6C3200BDC9A3 /* User.xcdatamodeld in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
+				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
 				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
+				320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
