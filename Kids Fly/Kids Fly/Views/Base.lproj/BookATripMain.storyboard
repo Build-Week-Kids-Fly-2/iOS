@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hrK-1w-x44">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tw6-Jr-gmI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-bT-0Ri">
-                                <rect key="frame" x="364" y="109" width="30" height="22"/>
+                                <rect key="frame" x="364" y="109" width="30" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="XHB-c0-RLa"/>
                                 </constraints>
@@ -60,19 +60,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Anna!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-8x-78d">
-                                <rect key="frame" x="108" y="201" width="92.5" height="29"/>
+                                <rect key="frame" x="108" y="201" width="91" height="28"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book a trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jou-NF-ISP">
-                                <rect key="frame" x="20" y="271" width="103" height="25.5"/>
+                                <rect key="frame" x="20" y="271" width="103" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-4i-Adm">
-                                <rect key="frame" x="20" y="304.5" width="374" height="90"/>
+                                <rect key="frame" x="20" y="303.5" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7yg-CY-loE"/>
@@ -83,11 +83,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jZI-4a-vRb" kind="show" identifier="BookTripSegue" id="gqs-oY-q8r"/>
+                                    <segue destination="jZI-4a-vRb" kind="show" id="chL-Oq-6ed"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOD-rC-OM1">
-                                <rect key="frame" x="20" y="470" width="374" height="343"/>
+                                <rect key="frame" x="20" y="468" width="374" height="345"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzZ-1O-ZBH">
                                     <size key="itemSize" width="343" height="90"/>
@@ -107,7 +107,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBeach" translatesAutoresizingMaskIntoConstraints="NO" id="oS3-3Q-dWN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90.000000000000057"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,7 +153,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-dt-u5W">
-                                <rect key="frame" x="20" y="424.5" width="145.5" height="25.5"/>
+                                <rect key="frame" x="20" y="423.5" width="148" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,9 +195,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="VectorChekInPin" id="WNF-RE-rmO"/>
-                    <navigationItem key="navigationItem" id="Fhu-XO-Rqq"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBarItem key="tabBarItem" title="" id="eNF-cR-tSS"/>
+                    <navigationItem key="navigationItem" id="Fhu-XO-Rqq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="s7L-tL-Rcd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="xOD-rC-OM1" id="R6d-cQ-UEJ"/>
                         <outlet property="hiUserLabel" destination="m6l-8x-78d" id="r7w-n7-jVs"/>
@@ -206,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.1739130434785" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2862.3188405797105" y="138.61607142857142"/>
         </scene>
         <!--Book Trip View Controller-->
         <scene sceneID="DWF-lK-Z1Q">
@@ -240,7 +241,7 @@
                                 <state key="normal" title="Button" image="VectorMenu"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-mD-FQV">
-                                <rect key="frame" x="90" y="232" width="234" height="63"/>
+                                <rect key="frame" x="90" y="212" width="234" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehk-Ph-jgQ">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="17"/>
@@ -263,7 +264,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aTJ-xT-s1k">
-                                <rect key="frame" x="90" y="335" width="234" height="63"/>
+                                <rect key="frame" x="90" y="315" width="234" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Travelers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-kd-Jxt">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="17"/>
@@ -286,7 +287,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ygx-sE-Ha0">
-                                <rect key="frame" x="90" y="438" width="234" height="63"/>
+                                <rect key="frame" x="90" y="418" width="234" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-bF-d6D">
                                         <rect key="frame" x="0.0" y="0.0" width="30.5" height="17"/>
@@ -309,7 +310,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QpL-Zx-RJJ">
-                                <rect key="frame" x="90" y="541" width="234" height="63"/>
+                                <rect key="frame" x="90" y="521" width="234" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-Sa-8Wn">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="17"/>
@@ -332,7 +333,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-yM-Kl3">
-                                <rect key="frame" x="90" y="644" width="234" height="63"/>
+                                <rect key="frame" x="90" y="624" width="234" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-Mj-vxe">
                                         <rect key="frame" x="0.0" y="0.0" width="89" height="17"/>
@@ -355,7 +356,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3L-I1-sLi">
-                                <rect key="frame" x="110" y="747" width="195" height="44"/>
+                                <rect key="frame" x="110" y="727" width="195" height="44"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.792156862745098" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="g9H-wa-XxV"/>
@@ -384,7 +385,7 @@
                             <constraint firstItem="aTJ-xT-s1k" firstAttribute="top" secondItem="zIp-mD-FQV" secondAttribute="bottom" constant="40" id="ZA2-C5-JlF"/>
                             <constraint firstItem="wRT-vX-cOu" firstAttribute="trailing" secondItem="aTJ-xT-s1k" secondAttribute="trailing" constant="90" id="aTW-XE-YvS"/>
                             <constraint firstItem="pj5-TJ-tpP" firstAttribute="top" secondItem="wRT-vX-cOu" secondAttribute="top" constant="30" id="aiY-Tw-NoT"/>
-                            <constraint firstItem="zIp-mD-FQV" firstAttribute="top" secondItem="1nM-e3-mfm" secondAttribute="bottom" constant="80" id="awp-0A-Qt2"/>
+                            <constraint firstItem="zIp-mD-FQV" firstAttribute="top" secondItem="1nM-e3-mfm" secondAttribute="bottom" constant="60" id="awp-0A-Qt2"/>
                             <constraint firstItem="wRT-vX-cOu" firstAttribute="trailing" secondItem="yq9-gf-OWo" secondAttribute="trailing" constant="20" id="cZE-TY-hWO"/>
                             <constraint firstItem="pj5-TJ-tpP" firstAttribute="leading" secondItem="1nM-e3-mfm" secondAttribute="trailing" constant="38" id="crZ-uC-Gdv"/>
                             <constraint firstItem="B3L-I1-sLi" firstAttribute="top" secondItem="gqq-yM-Kl3" secondAttribute="bottom" constant="40" id="et7-m5-Gpx"/>
@@ -402,12 +403,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wRT-vX-cOu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="VectorChekInPin" id="BRx-nB-JjE"/>
                     <navigationItem key="navigationItem" id="syd-nv-j9B">
                         <barButtonItem key="backBarButtonItem" title=" " id="bsO-MX-fx6"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left" catalog="system" id="HIf-D0-hZ6"/>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateTextField" destination="TxB-el-1jq" id="qlM-qd-mEb"/>
                         <outlet property="flightNumberTextField" destination="QPW-Fh-Szn" id="MIl-js-ajT"/>
@@ -418,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCW-Nj-Ci7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2859" y="139"/>
+            <point key="canvasLocation" x="3768.115942028986" y="138.61607142857142"/>
         </scene>
         <!--Hire View Controller-->
         <scene sceneID="0mf-VX-7Hi">
@@ -647,7 +645,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQr-sa-7cC">
-                                <rect key="frame" x="110" y="689" width="195" height="44"/>
+                                <rect key="frame" x="110" y="738" width="195" height="44"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.79215686269999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="aFD-Yq-His"/>
@@ -714,7 +712,7 @@
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gl3-Gd-uZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3653.6231884057975" y="138.61607142857142"/>
+            <point key="canvasLocation" x="4563.768115942029" y="138.61607142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PUg-uh-tnm">
@@ -728,23 +726,23 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="204"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBeach" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-X1-1bX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.00000000000006"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Your Trip to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XB-pE-ZdI">
-                                        <rect key="frame" x="8" y="40" width="314" height="43.5"/>
+                                        <rect key="frame" x="8" y="40" width="314" height="42"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="36"/>
                                         <color key="textColor" red="0.87843137250000003" green="0.91764705879999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Auckland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkd-cD-8Hn">
-                                        <rect key="frame" x="8" y="103.5" width="398" height="36"/>
+                                        <rect key="frame" x="8" y="102" width="398" height="35"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
                                         <color key="textColor" red="0.87843137250000003" green="0.91764705879999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="3 December 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-SX-4O2">
-                                        <rect key="frame" x="8" y="147.5" width="398" height="20.5"/>
+                                        <rect key="frame" x="8" y="145" width="398" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -999,7 +997,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z60-jB-SaB">
-                                <rect key="frame" x="110" y="689" width="195" height="44"/>
+                                <rect key="frame" x="110" y="738" width="195" height="44"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.79215686269999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Tby-uS-TAk"/>
@@ -1043,25 +1041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tck-ik-K4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4482.608695652174" y="138.61607142857142"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="8ro-Nd-QYz">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hrK-1w-x44" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bg9-i1-3Ak">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="tw6-Jr-gmI" kind="relationship" relationship="viewControllers" id="rIc-UZ-jps"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pyN-0j-ecs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="5392.753623188406" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AaL-IT-mWw">
@@ -1075,12 +1055,30 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ohk-34-VqD"/>
+                        <segue destination="gAT-CF-XK3" kind="relationship" relationship="rootViewController" id="Ohk-34-VqD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fb6-jh-Z51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="070-19-2j6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gAT-CF-XK3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="IIr-7z-Sqn"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tmg-7M-WkX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="okR-Tf-DRH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynx-a4-VQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
@@ -1098,7 +1096,6 @@
         <image name="VectorMenu" width="31" height="20"/>
         <image name="VectorSuitCase" width="16" height="15"/>
         <image name="VectorTime" width="27" height="27"/>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="ion-person" width="32" height="32"/>
         <image name="vaadin-familyFamily" width="32" height="32"/>
     </resources>

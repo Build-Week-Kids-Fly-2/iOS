@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="Gct-RY-O5P">
+            <objects>
+                <viewController id="i4F-rJ-gAV" customClass="SettingsViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pyq-Mr-iJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-r3-Qxz">
+                                <rect key="frame" x="340" y="44" width="54" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBz-EX-BJG">
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JBz-EX-BJG" secondAttribute="height" multiplier="1:1" id="2mY-1q-ghF"/>
+                                            <constraint firstAttribute="width" constant="22" id="hEm-7T-ifk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="VectorBell"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-rK-IYX">
+                                        <rect key="frame" x="34" y="0.0" width="20" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Afj-Bn-LfI"/>
+                                        </constraints>
+                                        <state key="normal" title="x" backgroundImage="XBackground">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JBz-EX-BJG" firstAttribute="leading" secondItem="iN6-r3-Qxz" secondAttribute="leading" id="f5w-Cb-SMs"/>
+                                    <constraint firstAttribute="bottom" secondItem="JBz-EX-BJG" secondAttribute="bottom" id="vWs-pw-2yO"/>
+                                    <constraint firstItem="JBz-EX-BJG" firstAttribute="top" secondItem="iN6-r3-Qxz" secondAttribute="top" id="xZp-sw-fAa"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r65-JV-4uN">
+                                <rect key="frame" x="20" y="144" width="374" height="438"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="438" id="e2Q-iv-n1f"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsCell" id="Key-5U-kYi">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Key-5U-kYi" id="Jqk-Go-kpB">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yMe-ww-L5g" kind="show" id="mYy-bz-bO1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ufI-fy-T2S" firstAttribute="trailing" secondItem="iN6-r3-Qxz" secondAttribute="trailing" constant="20" id="DEX-Lh-tfQ"/>
+                            <constraint firstItem="r65-JV-4uN" firstAttribute="top" secondItem="ufI-fy-T2S" secondAttribute="top" constant="100" id="I5a-ZI-6hR"/>
+                            <constraint firstItem="ufI-fy-T2S" firstAttribute="trailing" secondItem="r65-JV-4uN" secondAttribute="trailing" constant="20" id="YDP-aD-SbM"/>
+                            <constraint firstItem="iN6-r3-Qxz" firstAttribute="top" secondItem="ufI-fy-T2S" secondAttribute="top" id="qIf-E0-SLr"/>
+                            <constraint firstItem="r65-JV-4uN" firstAttribute="leading" secondItem="ufI-fy-T2S" secondAttribute="leading" constant="20" id="uYQ-Dt-V5J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ufI-fy-T2S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="VectorChekInPin" id="bOC-7q-pwW">
+                        <color key="badgeColor" red="0.36078431372549019" green="0.63529411764705879" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFb-IZ-9XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="118.52678571428571"/>
+        </scene>
+        <!--EditProfile-->
+        <scene sceneID="AbQ-El-LMS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditProfile" id="yMe-ww-L5g" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OhG-mH-t7h"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ly-Zx-eEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="119"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MxH-PI-Zu1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h0W-1s-or2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dYy-qf-6Dm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="i4F-rJ-gAV" kind="relationship" relationship="viewControllers" id="QRd-lN-gGP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu6-f3-Nb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="VectorBell" width="20" height="22"/>
+        <image name="VectorChekInPin" width="25" height="30"/>
+        <image name="XBackground" width="23" height="20"/>
+    </resources>
+</document>
