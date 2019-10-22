@@ -29,6 +29,8 @@
 		320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */; };
 		320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */; };
 		320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */; };
+		320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB47235F625B003D1BE4 /* HireViewController.swift */; };
+		320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookATripMainViewController.swift; sourceTree = "<group>"; };
 		320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
 		320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTripViewController.swift; sourceTree = "<group>"; };
+		320ACB47235F625B003D1BE4 /* HireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HireViewController.swift; sourceTree = "<group>"; };
+		320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTripViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +140,8 @@
 				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */,
 				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
+				320ACB47235F625B003D1BE4 /* HireViewController.swift */,
+				320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
 				0580131A235FA13300BDC9A3 /* Bearer.swift in Sources */,
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
+				320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */,
+				320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
 				05801321235FA53B00BDC9A3 /* Trip+Convenience.swift in Sources */,
 				320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */,
