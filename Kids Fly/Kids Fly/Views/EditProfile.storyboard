@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="loE-5a-3Wa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ly-Pk-jXn">
-                                <rect key="frame" x="20" y="139" width="68" height="28"/>
+                                <rect key="frame" x="20" y="139" width="82" height="29"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-jF-Gam">
-                                <rect key="frame" x="20" y="217" width="374" height="145"/>
+                                <rect key="frame" x="20" y="218" width="374" height="145"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="7A8-ft-qlX"/>
@@ -82,6 +82,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oKI-fh-Hkp" firstAttribute="top" secondItem="dgd-xe-dAd" secondAttribute="top" id="98s-mG-w6a"/>
+                            <constraint firstItem="dgd-xe-dAd" firstAttribute="trailing" secondItem="2ly-Pk-jXn" secondAttribute="trailing" constant="312" id="FT7-Ac-PZ0"/>
                             <constraint firstItem="ZJK-jF-Gam" firstAttribute="top" secondItem="2ly-Pk-jXn" secondAttribute="bottom" constant="50" id="GC7-wt-gW2"/>
                             <constraint firstItem="2ly-Pk-jXn" firstAttribute="top" secondItem="oKI-fh-Hkp" secondAttribute="bottom" constant="50" id="KrL-rO-cQ6"/>
                             <constraint firstItem="dgd-xe-dAd" firstAttribute="trailing" secondItem="ZJK-jF-Gam" secondAttribute="trailing" constant="20" id="NZf-L8-06v"/>
@@ -98,16 +99,16 @@
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Family Passport View Controller-->
         <scene sceneID="SZa-al-pNX">
             <objects>
-                <viewController id="1l3-jg-pja" sceneMemberID="viewController">
+                <viewController id="1l3-jg-pja" customClass="FamilyPassportViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I2D-np-Az2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Passport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTt-hB-SML">
-                                <rect key="frame" x="20" y="115" width="172.5" height="28"/>
+                                <rect key="frame" x="20" y="115" width="172.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +147,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sZN-qH-JCC">
-                                <rect key="frame" x="20" y="203" width="374" height="560"/>
+                                <rect key="frame" x="20" y="204" width="374" height="560"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="560" id="ABh-0R-2CY"/>
@@ -173,7 +174,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Passport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJo-md-Fry">
-                                                    <rect key="frame" x="78" y="40" width="129.5" height="21"/>
+                                                    <rect key="frame" x="78" y="40" width="128.5" height="22"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -198,6 +199,7 @@
                         <constraints>
                             <constraint firstItem="sZN-qH-JCC" firstAttribute="top" secondItem="BTt-hB-SML" secondAttribute="bottom" constant="60" id="9qy-xU-PG2"/>
                             <constraint firstItem="2e3-eC-DnD" firstAttribute="trailing" secondItem="sZN-qH-JCC" secondAttribute="trailing" constant="20" id="EWS-tx-poJ"/>
+                            <constraint firstItem="2e3-eC-DnD" firstAttribute="trailing" secondItem="BTt-hB-SML" secondAttribute="trailing" constant="221.5" id="LbN-yC-WxD"/>
                             <constraint firstItem="BTt-hB-SML" firstAttribute="top" secondItem="y1k-d4-zno" secondAttribute="bottom" constant="50" id="bhk-PZ-NFA"/>
                             <constraint firstItem="BTt-hB-SML" firstAttribute="leading" secondItem="2e3-eC-DnD" secondAttribute="leading" constant="20" id="gIS-w5-fKh"/>
                             <constraint firstItem="sZN-qH-JCC" firstAttribute="leading" secondItem="2e3-eC-DnD" secondAttribute="leading" constant="20" id="lTO-YI-HGC"/>
@@ -213,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="1860.8695652173915" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Family Member View Controller-->
         <scene sceneID="KTj-a6-nI8">
             <objects>
-                <viewController id="Je3-Rc-mys" sceneMemberID="viewController">
+                <viewController id="Je3-Rc-mys" customClass="AddFamilyMemberViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ofA-lh-3Oh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

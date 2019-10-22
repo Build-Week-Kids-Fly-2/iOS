@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import DropDown
 
 class BookTripViewController: UIViewController {
+    
+    // MARK: - IBOutlets & Properties
 
     @IBOutlet weak var serviceAirportTextField: UITextField!
     @IBOutlet weak var numberOfTravelersTextField: UITextField!
@@ -16,21 +19,35 @@ class BookTripViewController: UIViewController {
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
     
+    let dropDownAirports = DropDown()
+    let dropDownNumberOfTravelers = DropDown()
+    
+    // MARK: - View LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serviceAirportSeleted()
-        // Do any additional setup after loading the view.
+        setUpDropDowns()
+        serviceAirportTextField.delegate = self
+        numberOfTravelersTextField.delegate = self
     }
     
+    // MARK: - IBActions & Methods
     
-    
-    @objc func serviceAirportSeleted() {
-        if serviceAirportTextField.isEditing {
-            performSegue(withIdentifier: "ShowAirports", sender: self)
-        }
+    func setUpDropDowns() {
+        //Airport DropDown
+        dropDownAirports.anchorView = serviceAirportTextField
+        dropDownAirports.dismissMode = .automatic
+        dropDownAirports.dataSource = ["DFW: Dallas/Fort Worth International Airport", "LAX: Los Angeles International Airport", "LGA: LaGuardia Airport", "DIA: Denver International Airport", "ATL: Atlanta International Airport"]
+        //NumberOfTravelers DropDown
+        dropDownNumberOfTravelers.anchorView = numberOfTravelersTextField
+        dropDownNumberOfTravelers.dismissMode = .automatic
+        dropDownNumberOfTravelers.dataSource = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        
     }
-
+    
+    @IBAction func planTripButtonTapped(_ sender: Any) {
+       }
+    
     /*
     // MARK: - Navigation
 
@@ -40,13 +57,26 @@ class BookTripViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
-    @IBAction func planTripButtonTapped(_ sender: Any) {
-    }
-    
 }
 
 extension BookTripViewController:UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case serviceAirportTextField:
+            //serviceAirportTextField.becomeFirstResponder()
+            dropDownAirports.show()
+            dropDownAirports.selectionAction = { (index: Int, item: String) in
+                self.serviceAirportTextField.text = item
+            }
+        case numberOfTravelersTextField:
+            //numberOfTravelersTextField.becomeFirstResponder()
+            dropDownNumberOfTravelers.show()
+            dropDownNumberOfTravelers.selectionAction = { (index: Int, item: String) in
+                self.numberOfTravelersTextField.text = item
+            }
+        
+        default:
+            break
+        }
+    }
 }

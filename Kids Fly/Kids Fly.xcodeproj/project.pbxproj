@@ -35,6 +35,8 @@
 		320ACB4E235F76B3003D1BE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */; };
 		320ACB50235F7704003D1BE4 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */; };
 		320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */; };
+		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
+		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
+		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,7 @@
 				05801315235F713300BDC9A3 /* SignIn.storyboard */,
 				320ACB4B235F734A003D1BE4 /* SettingsMenu.storyboard */,
 				320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */,
+				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,13 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */,
-				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */,
 				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
 				320ACB47235F625B003D1BE4 /* HireViewController.swift */,
 				320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */,
 				320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */,
 				320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */,
+				32E6743C235F98270081D236 /* FamilyPassportViewController.swift */,
+				32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 			files = (
 				05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */,
 				05801318235F98CA00BDC9A3 /* APIController.swift in Sources */,
+				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
+				0580130A235E6C3200BDC9A3 /* User.xcdatamodeld in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
@@ -329,6 +337,7 @@
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
 				320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */,
 				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
+				32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */,
 				0580131A235FA13300BDC9A3 /* Bearer.swift in Sources */,
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */,
