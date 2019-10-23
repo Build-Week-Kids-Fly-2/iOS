@@ -11,9 +11,17 @@ import Foundation
 struct TripRepresentation: Codable {
     
     let airport: String
-    let date:  String
+    let airline: String
     let flightNumber: String
-    let numberOfTravelers: String
-    let time: String
+    let departureTime: String
+    let carryOnBags: String
+    let checkedBags: String
+    let children: String 
+    let arrived: String
+    let enRoute: String
+    
+    enum CodingKeys: String, CodingKeys {
+        case enRoute = "en_route"
+    }
     
 }

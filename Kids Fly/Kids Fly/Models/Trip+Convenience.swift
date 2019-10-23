@@ -12,21 +12,24 @@ import CoreData
 extension Trip {
     var tripRepresentation: TripRepresentation? {
         guard let airport = airport,
-            let date = date,
+            let airline = airline,
             let flightNumber = flightNumber,
-            let numberOfTravelers = numberOfTravelers,
-            let time = time
-            else { return nil }
-        return TripRepresentation(airport: airport, date: date, flightNumber: flightNumber, numberOfTravelers: numberOfTravelers, time: time)
+            let departureTime = departureTime,
+            let carryOnBags = carryOnBags,
+            let checkedBags = checkedBags,
+            let children =  children,
+            let arrived = arrived,
+            let enRoute = enRoute else { return nil }
+        return TripRepresentation(airport: airport, airline: airline, flightNumber: flightNumber, departureTime: departureTime, carryOnBags: carryOnBags, checkedBags: checkedBags, children: children, arrived: arrived, enRoute: enRoute)
     }
     
     convenience init(airport: String,
-                     date: String, flightNumber: String, numberOfTravelers: String, time: String,context: NSManagedObjectContext) {
+                     airline: String, flightNumber: String, departureTime: String, carryOnBags: String, checkedBags: String, children: String, arrived: String, enRoute: String, context: NSManagedObjectContext) {
         self.init(context: context)
         self.airport = airport
-        self.date = date
+        self.airline = airline
         self.flightNumber = flightNumber
-        self.numberOfTravelers = numberOfTravelers
+        self.departureTime = departureTime
         self.time = time
     }
     
