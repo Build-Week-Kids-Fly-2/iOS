@@ -16,6 +16,7 @@
 		0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */; };
 		05801321235FA53B00BDC9A3 /* Trip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */; };
 		05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801322235FAC3100BDC9A3 /* TripRepresentation.swift */; };
+		05801325235FF60100BDC9A3 /* CheckingIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05801324235FF60100BDC9A3 /* CheckingIn.storyboard */; };
 		320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1D235E4991003D1BE4 /* AppDelegate.swift */; };
 		320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */; };
 		320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */; };
@@ -50,6 +51,7 @@
 		0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trips.xcdatamodel; sourceTree = "<group>"; };
 		05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Convenience.swift"; sourceTree = "<group>"; };
 		05801322235FAC3100BDC9A3 /* TripRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepresentation.swift; sourceTree = "<group>"; };
+		05801324235FF60100BDC9A3 /* CheckingIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckingIn.storyboard; sourceTree = "<group>"; };
 		18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_Fly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF28BEDC9A90C8C1DA3E11 /* Pods-Kids Fly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.release.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.release.xcconfig"; sourceTree = "<group>"; };
 		320ACB1A235E4991003D1BE4 /* Kids Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				320ACB4B235F734A003D1BE4 /* SettingsMenu.storyboard */,
 				320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */,
 				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
+				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				320ACB2D235E4992003D1BE4 /* LaunchScreen.storyboard in Resources */,
 				320ACB4C235F734A003D1BE4 /* SettingsMenu.storyboard in Resources */,
 				320ACB50235F7704003D1BE4 /* EditProfile.storyboard in Resources */,
+				05801325235FF60100BDC9A3 /* CheckingIn.storyboard in Resources */,
 				320ACB2A235E4992003D1BE4 /* Assets.xcassets in Resources */,
 				320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */,
 				05801316235F713300BDC9A3 /* SignIn.storyboard in Resources */,
