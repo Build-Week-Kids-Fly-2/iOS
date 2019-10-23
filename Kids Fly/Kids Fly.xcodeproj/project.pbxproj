@@ -38,10 +38,21 @@
 		3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB12235FB86E00870B28 /* DatePickerViewController.swift */; };
 		3272DB152360B16600870B28 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB142360B16600870B28 /* User+Convenience.swift */; };
 		3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */; };
+		3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3272DB222360E5B200870B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320ACB12235E4991003D1BE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 320ACB19235E4991003D1BE4;
+			remoteInfo = "Kids Fly";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -79,6 +90,9 @@
 		3272DB12235FB86E00870B28 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3272DB142360B16600870B28 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kids FlyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids_FlyUITests.swift; sourceTree = "<group>"; };
+		3272DB212360E5B200870B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +107,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3272DB1A2360E5B200870B28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB1C235E4991003D1BE4 /* Kids Fly */,
+				3272DB1E2360E5B200870B28 /* Kids FlyUITests */,
 				320ACB1B235E4991003D1BE4 /* Products */,
 				95FCE207C59BFD3E72D053EC /* Pods */,
 				EDA4CAF15112E8F17316A2BF /* Frameworks */,
@@ -110,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB1A235E4991003D1BE4 /* Kids Fly.app */,
+				3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +226,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		3272DB1E2360E5B200870B28 /* Kids FlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */,
+				3272DB212360E5B200870B28 /* Info.plist */,
+			);
+			path = "Kids FlyUITests";
+			sourceTree = "<group>";
+		};
 		95FCE207C59BFD3E72D053EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +274,24 @@
 			productReference = 320ACB1A235E4991003D1BE4 /* Kids Fly.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3272DB1C2360E5B200870B28 /* Kids FlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3272DB242360E5B200870B28 /* Build configuration list for PBXNativeTarget "Kids FlyUITests" */;
+			buildPhases = (
+				3272DB192360E5B200870B28 /* Sources */,
+				3272DB1A2360E5B200870B28 /* Frameworks */,
+				3272DB1B2360E5B200870B28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3272DB232360E5B200870B28 /* PBXTargetDependency */,
+			);
+			name = "Kids FlyUITests";
+			productName = "Kids FlyUITests";
+			productReference = 3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +304,10 @@
 				TargetAttributes = {
 					320ACB19235E4991003D1BE4 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					3272DB1C2360E5B200870B28 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 320ACB19235E4991003D1BE4;
 					};
 				};
 			};
@@ -271,6 +325,7 @@
 			projectRoot = "";
 			targets = (
 				320ACB19235E4991003D1BE4 /* Kids Fly */,
+				3272DB1C2360E5B200870B28 /* Kids FlyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +345,13 @@
 				320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */,
 				05801316235F713300BDC9A3 /* SignIn.storyboard in Resources */,
 				320ACB3A235E4B64003D1BE4 /* Lato-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3272DB1B2360E5B200870B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +430,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3272DB192360E5B200870B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3272DB232360E5B200870B28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 320ACB19235E4991003D1BE4 /* Kids Fly */;
+			targetProxy = 3272DB222360E5B200870B28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */ = {
@@ -542,6 +620,44 @@
 			};
 			name = Release;
 		};
+		3272DB252360E5B200870B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM84C6XKT7;
+				INFOPLIST_FILE = "Kids FlyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeconnerly.Kids-FlyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids Fly";
+			};
+			name = Debug;
+		};
+		3272DB262360E5B200870B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM84C6XKT7;
+				INFOPLIST_FILE = "Kids FlyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeconnerly.Kids-FlyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids Fly";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,6 +675,15 @@
 			buildConfigurations = (
 				320ACB32235E4992003D1BE4 /* Debug */,
 				320ACB33235E4992003D1BE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3272DB242360E5B200870B28 /* Build configuration list for PBXNativeTarget "Kids FlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3272DB252360E5B200870B28 /* Debug */,
+				3272DB262360E5B200870B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

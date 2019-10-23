@@ -50,13 +50,15 @@
                                     <action selector="signUpOrSignIn1:" destination="BPo-KL-nTY" eventType="valueChanged" id="bIl-pU-Ns0"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-in-K6r">
-                                <rect key="frame" x="36" y="287" width="62.5" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5N-in-K6r">
+                                <rect key="frame" x="36" y="287" width="349" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="signInEmailTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-PN-v0m">
                                 <rect key="frame" x="36" y="387" width="336" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -74,6 +76,7 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJZ-MI-oFh">
                                 <rect key="frame" x="36" y="338" width="349" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="signInFullNameTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -94,6 +97,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-f2-Cac">
                                 <rect key="frame" x="42" y="466.5" width="359" height="31"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.792156862745098" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SignInButton"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -212,7 +216,7 @@
                         <outlet property="fullNameTextField" destination="hJZ-MI-oFh" id="tw2-6K-gjH"/>
                         <outlet property="googleSignIn" destination="4tr-uA-RUa" id="Ru3-Pt-Pg3"/>
                         <outlet property="loginSignUpText" destination="Prf-VN-43w" id="JZS-dW-xRF"/>
-                        <outlet property="passwordTextField" destination="aWJ-PN-v0m" id="qud-Ki-ecr"/>
+                        <outlet property="passwordTextField" destination="aWJ-PN-v0m" id="mtv-0e-rY3"/>
                         <outlet property="signInOrSignUpButton" destination="dYf-f2-Cac" id="6gD-fd-2nA"/>
                         <outlet property="signInOrSignUpControl" destination="dez-6r-ikh" id="Mh0-ky-5Jy"/>
                     </connections>
