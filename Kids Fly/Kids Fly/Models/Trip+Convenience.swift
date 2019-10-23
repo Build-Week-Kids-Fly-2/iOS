@@ -30,7 +30,7 @@ extension Trip {
         self.time = time
     }
     
-    @discardableResult convenience init?(tripRepresentation: TripRepresentation, context: NSManagedObjectContext) {
+    @discardableResult convenience init?(tripRepresentation: TripRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(airport: tripRepresentation.airport,
                   date: tripRepresentation.date,
                   flightNumber: tripRepresentation.flightNumber,

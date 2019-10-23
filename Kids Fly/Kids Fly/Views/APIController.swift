@@ -28,12 +28,14 @@ enum NetworkError: Error {
 // "Model" Controller
 class APIController {
     
+    // MARK: - Properties
+    
     let baseURL = URL(string: " ")!
-    var user: Int?
+    var user: UserRepresentation?
     var bearer: Bearer?
     
     // The Error? in the completion closure lets us return an error to the view controller for further error handling.
-    func signUp(with user: User, completion: @escaping (NetworkError?) -> Void) {
+    func signUp(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
         
         let signUpURL = baseURL
 //            .appendingPathComponent("users")
@@ -74,7 +76,7 @@ class APIController {
             }.resume()
     }
     
-    func login(with user: User, completion: @escaping (NetworkError?) -> Void) {
+    func login(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
         
         // Set up the URL
         
