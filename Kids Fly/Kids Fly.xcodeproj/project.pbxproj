@@ -12,7 +12,6 @@
 		05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580130F235E6CF000BDC9A3 /* SignInViewController.swift */; };
 		05801316235F713300BDC9A3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05801315235F713300BDC9A3 /* SignIn.storyboard */; };
 		05801318235F98CA00BDC9A3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801317235F98CA00BDC9A3 /* APIController.swift */; };
-		0580131A235FA13300BDC9A3 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801319235FA13300BDC9A3 /* Bearer.swift */; };
 		0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */; };
 		05801321235FA53B00BDC9A3 /* Trip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */; };
 		05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801322235FAC3100BDC9A3 /* TripRepresentation.swift */; };
@@ -36,6 +35,7 @@
 		320ACB50235F7704003D1BE4 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */; };
 		320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */; };
 		3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB12235FB86E00870B28 /* DatePickerViewController.swift */; };
+		3272DB152360B16600870B28 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB142360B16600870B28 /* User+Convenience.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
@@ -47,7 +47,6 @@
 		0580130F235E6CF000BDC9A3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		05801315235F713300BDC9A3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		05801317235F98CA00BDC9A3 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = "Kids Fly/Views/APIController.swift"; sourceTree = SOURCE_ROOT; };
-		05801319235FA13300BDC9A3 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trips.xcdatamodel; sourceTree = "<group>"; };
 		05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Convenience.swift"; sourceTree = "<group>"; };
 		05801322235FAC3100BDC9A3 /* TripRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepresentation.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		320ACB51235F771B003D1BE4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		3272DB12235FB86E00870B28 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		3272DB142360B16600870B28 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			children = (
 				0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */,
 				0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */,
-				05801319235FA13300BDC9A3 /* Bearer.swift */,
+				3272DB142360B16600870B28 /* User+Convenience.swift */,
 				0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */,
 				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
 				05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */,
@@ -336,11 +336,11 @@
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
+				3272DB152360B16600870B28 /* User+Convenience.swift in Sources */,
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
 				320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */,
 				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
 				32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */,
-				0580131A235FA13300BDC9A3 /* Bearer.swift in Sources */,
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */,
 				3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */,
