@@ -25,7 +25,7 @@ enum NetworkError: Error {
     case noToken
 }
 
-// "Model" Controller
+
 class APIController {
     
     // MARK: - Properties
@@ -34,7 +34,8 @@ class APIController {
     var user: UserRepresentation?
     var token: String?
     
-    // The Error? in the completion closure lets us return an error to the view controller for further error handling.
+    //MARK: - Sign Up
+    
     func signUp(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
         
         let signUpURL = baseURL.appendingPathComponent("auth/register")
@@ -85,16 +86,12 @@ class APIController {
         }
     }
     
-    func login(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
-        
-        // Set up the URL
-        
-        let loginURL = baseURL
-            .appendingPathComponent("auth")
-            .appendingPathComponent("login")
-        
-        // Set up a request
-        
+    //MARK: - Log In
+    
+    func login(with user: UserRepresentation, completion: @escaping (Result<String, NetworkError>) -> Void) {
+
+        let loginURL = baseURL.appendingPathComponent("auth/login")
+ 
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -105,32 +102,27 @@ class APIController {
             request.httpBody = try encoder.encode(user)
         } catch {
             NSLog("Error encoding user object: \(error)")
-            completion(.encodingError)
+            completion(.failure(.encodingError))
             return
         }
         
-        // Perform the request
-        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            // Handle errors
             
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-                completion(.responseError)
+                print("\(response.statusCode)")
+                completion(.failure(.responseError))
                 return
             }
             
             if let error = error {
                 NSLog("Error logging in: \(error)")
-                completion(.otherError(error))
+                completion(.failure(.otherError(error)))
                 return
             }
             
-            // (optionally) handle the data returned
-            
             guard let data = data else {
-                completion(.noData)
+                completion(.failure(.noData))
                 return
             }
             
@@ -144,12 +136,14 @@ class APIController {
                     User(userRepresentation: self.user!)
                 }
                 try CoreDataStack.shared.save(context: moc)
+                if let token = self.token {
+                    completion(.success(token))
+                }
             } catch {
                 NSLog("error decoding data:\(error)")
-                completion(.noDecode)
+                completion(.failure(.noDecode))
                 return
             }
-            completion(nil)
         }.resume()
     }
 }

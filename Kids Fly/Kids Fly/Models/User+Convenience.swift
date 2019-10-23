@@ -26,6 +26,6 @@ extension User {
     }
     
     var userRepresentation: UserRepresentation {
-        return UserRepresentation(email: email!, password: password!, fullName: fullName!)
+        return UserRepresentation(email: email!, password: password!, fullName: fullName)
     }
 }

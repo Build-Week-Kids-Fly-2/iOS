@@ -16,7 +16,7 @@ struct UserRepresentation: Codable {
     
     let email: String
     let password: String
-    let fullName: String
+    let fullName: String?
     
 }
 

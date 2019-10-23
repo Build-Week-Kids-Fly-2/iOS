@@ -27,10 +27,11 @@ class Kids_FlyUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        app.segmentedControls.buttons["Sign In"].tap()
         //signIn emailTextField Test
         app.textFields["signInEmailTextField"].tap()
-        app.textFields["signInEmailTextField"].typeText("testing@test.com")
-        XCTAssertEqual(app.textFields["signInEmailTextField"].value as! String, "testing@test.com")
+        app.textFields["signInEmailTextField"].typeText("testymcTesterson@test.com")
+        XCTAssertEqual(app.textFields["signInEmailTextField"].value as! String, "testymcTesterson@test.com")
         
         //signIn fullNameTextField Test
         app.textFields["signInFullNameTextField"].tap()
@@ -43,13 +44,12 @@ class Kids_FlyUITests: XCTestCase {
         XCTAssertEqual(app.secureTextFields["passwordTextField"].value as! String, "••••••••")
         
         app.buttons["SignInButton"].tap()
-    }
-    
-    func testBookATripMain() {
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.buttons["BookATripMainButton"].tap()
     }
+    
+
 
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
