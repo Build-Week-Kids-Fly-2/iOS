@@ -13,7 +13,6 @@
 		05801316235F713300BDC9A3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05801315235F713300BDC9A3 /* SignIn.storyboard */; };
 		05801318235F98CA00BDC9A3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801317235F98CA00BDC9A3 /* APIController.swift */; };
 		0580131A235FA13300BDC9A3 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801319235FA13300BDC9A3 /* Bearer.swift */; };
-		0580131C235FA3AC00BDC9A3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580131B235FA3AC00BDC9A3 /* Users.swift */; };
 		0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */; };
 		05801321235FA53B00BDC9A3 /* Trip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */; };
 		05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801322235FAC3100BDC9A3 /* TripRepresentation.swift */; };
@@ -48,7 +47,6 @@
 		05801315235F713300BDC9A3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		05801317235F98CA00BDC9A3 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = "Kids Fly/Views/APIController.swift"; sourceTree = SOURCE_ROOT; };
 		05801319235FA13300BDC9A3 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
-		0580131B235FA3AC00BDC9A3 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trips.xcdatamodel; sourceTree = "<group>"; };
 		05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Convenience.swift"; sourceTree = "<group>"; };
 		05801322235FAC3100BDC9A3 /* TripRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepresentation.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */,
-				0580131B235FA3AC00BDC9A3 /* Users.swift */,
 				0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */,
 				05801319235FA13300BDC9A3 /* Bearer.swift */,
 				0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */,
@@ -330,12 +327,10 @@
 				05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */,
 				05801318235F98CA00BDC9A3 /* APIController.swift in Sources */,
 				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
-				0580130A235E6C3200BDC9A3 /* User.xcdatamodeld in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
-				0580131C235FA3AC00BDC9A3 /* Users.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
 				320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */,

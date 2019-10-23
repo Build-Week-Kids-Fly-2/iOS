@@ -8,10 +8,9 @@
 
 import Foundation
 struct UserRepresentation: Codable {
+    
     let email: String
     let password: String
     let fullName: String
-    let address: String
-    let phone: String
-    let localAirport: String
+    
 }
