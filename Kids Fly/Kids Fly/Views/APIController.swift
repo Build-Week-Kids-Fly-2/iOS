@@ -30,16 +30,14 @@ class APIController {
     
     // MARK: - Properties
     
-    let baseURL = URL(string: " ")!
+    let baseURL = URL(string: "https://evening-island-60784.herokuapp.com/api")!
     var user: UserRepresentation?
-    var bearer: Bearer?
+    var token: String?
     
     // The Error? in the completion closure lets us return an error to the view controller for further error handling.
     func signUp(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
         
-        let signUpURL = baseURL
-//            .appendingPathComponent("users")
-//            .appendingPathComponent("signup")
+        let signUpURL = baseURL.appendingPathComponent("auth/register")
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -62,7 +60,7 @@ class APIController {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let response = response as? HTTPURLResponse,
-                response.statusCode != 200 {
+                response.statusCode != 201 {
                 completion(.responseError)
                 return
             }
@@ -74,6 +72,17 @@ class APIController {
             }
             completion(nil)
             }.resume()
+        
+        do{
+            self.user = user
+            let moc = CoreDataStack.shared.mainContext
+            moc.performAndWait {
+                User(userRepresentation: self.user!)
+            }
+            try CoreDataStack.shared.save(context: moc)
+        } catch {
+            completion(.noDecode)
+        }
     }
     
     func login(with user: UserRepresentation, completion: @escaping (NetworkError?) -> Void) {
@@ -81,7 +90,7 @@ class APIController {
         // Set up the URL
         
         let loginURL = baseURL
-            .appendingPathComponent("users")
+            .appendingPathComponent("auth")
             .appendingPathComponent("login")
         
         // Set up a request
@@ -127,8 +136,16 @@ class APIController {
             
             do {
                 let bearer = try JSONDecoder().decode(Bearer.self, from: data)
-                self.bearer = bearer
+                self.token = bearer.token
+                self.user = user
+                let moc = CoreDataStack.shared.mainContext
+                
+                moc.performAndWait {
+                    User(userRepresentation: self.user!)
+                }
+                try CoreDataStack.shared.save(context: moc)
             } catch {
+                NSLog("error decoding data:\(error)")
                 completion(.noDecode)
                 return
             }

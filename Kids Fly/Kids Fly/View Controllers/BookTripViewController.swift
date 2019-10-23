@@ -22,6 +22,13 @@ class BookTripViewController: UIViewController {
     let dropDownAirports = DropDown()
     let dropDownNumberOfTravelers = DropDown()
     
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMMM, yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return formatter
+    }
+    
     // MARK: - View LifeCycle
     
     override func viewDidLoad() {
@@ -54,15 +61,16 @@ class BookTripViewController: UIViewController {
     @IBAction func planTripButtonTapped(_ sender: Any) {
        }
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDatePicker" {
+            guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
+            datePickerVC.delegate = self
+        }
     }
-    */
+
 }
 
 extension BookTripViewController:UITextFieldDelegate {
@@ -81,9 +89,18 @@ extension BookTripViewController:UITextFieldDelegate {
                 self.numberOfTravelersTextField.text = item
             }
         case dateTextField:
+            dateTextField.resignFirstResponder()
             performSegue(withIdentifier: "ShowDatePicker", sender: self)
         default:
             break
         }
     }
+}
+
+extension BookTripViewController: DatePickerDelegate {
+    func tourDateWasChosen(date: Date) {
+        dateTextField.text = dateFormatter.string(from: date)
+    }
+    
+    
 }

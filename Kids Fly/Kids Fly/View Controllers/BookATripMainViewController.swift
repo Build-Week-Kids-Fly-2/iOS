@@ -9,17 +9,28 @@
 import UIKit
 
 class BookATripMainViewController: UIViewController {
+    
+    // MARK: - IBOutlets & Properties
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var hiUserLabel: UILabel!
     
+    // MARK: - View LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //firstLaunchChecker()
+        performSegue(withIdentifier: "ShowLoginSegue", sender: self)
     }
     
+    // MARK: - IBActions & Methods
+    
+    func firstLaunchChecker() {
+        if UserDefaults.isFirstLaunch() {
+            performSegue(withIdentifier: "ShowLoginSegue", sender: self)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -32,6 +43,9 @@ class BookATripMainViewController: UIViewController {
     */
 
 }
+
+// MARK: - Extensions
+
 extension BookATripMainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1

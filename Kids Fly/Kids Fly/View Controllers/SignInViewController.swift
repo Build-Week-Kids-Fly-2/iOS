@@ -28,13 +28,16 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInOrSignUpButton: UIButton!
     @IBOutlet weak var loginSignUpText: UILabel!
     @IBOutlet weak var signInOrSignUpControl: UISegmentedControl!
+    @IBOutlet weak var fullNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         styleButton(button: signInOrSignUpButton)
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        fullNameTextField.delegate = self
         changeUI()
+        
     }
     
     func styleButton(button: UIButton) {
@@ -54,10 +57,12 @@ class SignInViewController: UIViewController {
     @IBAction func createAccountOrSignIn(_ sender: UIButton) {
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
+            let fullName = fullNameTextField.text,
             !email.isEmpty,
-            !password.isEmpty else { return }
+            !password.isEmpty,
+            !fullName.isEmpty else { return }
         
-        let user = UserRepresentation(email: email, password: password)
+        let user = UserRepresentation(email: email, password: password, fullName: fullName)
         
         if loginType == .signUp {
             apiController.signUp(with: user, completion: { (error) in
@@ -86,7 +91,7 @@ class SignInViewController: UIViewController {
                     NSLog("Error occurred during login: \(error)")
                 } else {
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "DashboardSegue", sender: self)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             })
@@ -100,6 +105,7 @@ class SignInViewController: UIViewController {
             self.signInOrSignUpButton.setTitle("Sign In", for: .normal)
             self.googleSignIn.titleLabel?.text = "Sign In with Google"
             self.facebookSignIn.titleLabel?.text = "Sign In with Facebook"
+            self.fullNameTextField.isHidden = true
         } else {
             self.loginType = .signUp
             signInOrSignUpControl.selectedSegmentIndex = 1
