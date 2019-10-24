@@ -14,15 +14,24 @@ struct Bearer: Codable {
 
 struct UserRepresentation: Codable {
     
-    let email: String
-    let password: String
-    let fullName: String
+    let email: String?
+    let password: String?
+    let fullName: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case email
+        case password
+        case fullName
+    }
     
 }
 
 extension UserRepresentation: Equatable {
     static func == (lhs: UserRepresentation, rhs: User) -> Bool {
-        return lhs.email == rhs.email && lhs.password == rhs.password
+        return lhs.email == rhs.email &&
+            lhs.password == rhs.password &&
+            lhs.fullName == rhs.fullName
+        
     }
     
     static func == (lhs: User, rhs: UserRepresentation) -> Bool {

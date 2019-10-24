@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DatePickerDelegate: AnyObject {
-    func tourDateWasChosen(date: Date)
+    func dateWasChosen(date: Date)
 }
 
 class DatePickerViewController: UIViewController {
@@ -36,7 +36,7 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func SelectDateTapped(_ sender: UIButton) {
-        self.delegate?.tourDateWasChosen(date: flightDatePicker.date)
+        self.delegate?.dateWasChosen(date: flightDatePicker.date)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func clearViewTapped(_ sender: UITapGestureRecognizer) {

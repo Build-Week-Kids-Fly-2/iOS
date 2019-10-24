@@ -18,13 +18,24 @@ class BookTripViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
+    @IBOutlet weak var airlineTextField: UITextField!
+    
+    let tripController = TripController.shared
     
     let dropDownAirports = DropDown()
     let dropDownNumberOfTravelers = DropDown()
+    var trip: Trip?
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMMM, yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return formatter
+    }
+    
+    var timeFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter
     }
@@ -61,7 +72,26 @@ class BookTripViewController: UIViewController {
     @IBAction func planTripButtonTapped(_ sender: Any) {
        }
     
-    
+    func createNewTrip() {
+        //setup Airport
+        guard let serviceAirport = serviceAirportTextField.text else { return }
+        var airport = serviceAirport
+        airport.removeFirst(4)
+        
+        //setup number of Travelers
+        guard let numTravelersString = numberOfTravelersTextField.text,
+            let numberOfTravelers = Int(numTravelersString) else { return }
+        
+        //setup Departure Date and Time
+        guard let date = dateTextField.text,
+            let time = timeTextField.text else { return }
+        let departureTime = "\(date) at \(time)"
+        
+        guard let flightNumber = flightNumberTextField.text,
+            let airline = airlineTextField.text else { return }
+        
+        self.trip = Trip(airport: airport, airline: airline, flightNumber: flightNumber, departureTime: departureTime, carryOnBags: 0, checkedBags: 0, children: Int32(numberOfTravelers), arrived: false, enRoute: false, identifier: nil)
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,8 +99,17 @@ class BookTripViewController: UIViewController {
             guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
             datePickerVC.delegate = self
         }
+        if segue.identifier == "ShowTimePicker" {
+            guard let timePickerVC = segue.destination as? TimePickerViewController else { return }
+            timePickerVC.delegate = self
+        }
+        if segue.identifier == "HireAssistantSegue" {
+            createNewTrip()
+            guard let hireVC = segue.destination as? HireViewController else { return }
+            hireVC.trip = trip
+            print("\(trip?.airline)")
+        }
     }
-
 }
 
 extension BookTripViewController:UITextFieldDelegate {
@@ -91,6 +130,9 @@ extension BookTripViewController:UITextFieldDelegate {
         case dateTextField:
             dateTextField.resignFirstResponder()
             performSegue(withIdentifier: "ShowDatePicker", sender: self)
+        case timeTextField:
+            timeTextField.resignFirstResponder()
+            performSegue(withIdentifier: "ShowTimePicker", sender: self)
         default:
             break
         }
@@ -98,9 +140,13 @@ extension BookTripViewController:UITextFieldDelegate {
 }
 
 extension BookTripViewController: DatePickerDelegate {
-    func tourDateWasChosen(date: Date) {
+    func dateWasChosen(date: Date) {
         dateTextField.text = dateFormatter.string(from: date)
     }
-    
-    
+}
+
+extension BookTripViewController: TimePickerDelegate {
+    func timeWasChosen(date: Date) {
+        timeTextField.text = timeFormatter.string(from: date)
+    }
 }

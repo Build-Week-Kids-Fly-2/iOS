@@ -10,11 +10,12 @@ import Foundation
 import CoreData
 
 extension User {
-    @discardableResult convenience init(email: String, password: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext){
+    @discardableResult convenience init(email: String, password: String, fullName: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext){
         self.init(context: context)
         
         self.email = email
         self.password = password
+        self.fullName = fullName
     }
     
     @discardableResult convenience init?(userRepresentation: UserRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
@@ -26,6 +27,6 @@ extension User {
     }
     
     var userRepresentation: UserRepresentation {
-        return UserRepresentation(email: email!, password: password!, fullName: fullName!)
+        return UserRepresentation(email: email, password: password, fullName: fullName)
     }
 }

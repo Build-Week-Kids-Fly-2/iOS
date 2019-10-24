@@ -15,12 +15,9 @@ enum LoginType {
 }
 
 class SignInViewController: UIViewController {
-    // MARK: - Properties
     
-    var apiController = APIController()
-    var loginType = LoginType.signUp
+    // MARK: - IBOutlets & Properties
     
-    // MARK: = Outlets
     @IBOutlet weak var googleSignIn: UIButton!
     @IBOutlet weak var facebookSignIn: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,9 +26,17 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var loginSignUpText: UILabel!
     @IBOutlet weak var signInOrSignUpControl: UISegmentedControl!
     @IBOutlet weak var fullNameTextField: UITextField!
+
+    @IBOutlet weak var fullNameLine: UIImageView!
+    
+    
+    var apiController = APIController()
+    var loginType = LoginType.signUp
+    
+    // MARK: - View LifeCycle
+
     @IBOutlet weak var fullNameLineBar: UIImageView!
     @IBOutlet weak var rememberMeLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +44,13 @@ class SignInViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         fullNameTextField.delegate = self
-        changeUI()
         
     }
     
+    // MARK: - IBActions & Methods
+    
     func styleButton(button: UIButton) {
+
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 10
     }
@@ -51,57 +58,74 @@ class SignInViewController: UIViewController {
     @IBAction func signUpOrSignIn1(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             loginType = .signIn
+
+            signInOrSignUpButton.setTitle("Sign In", for: .normal)
+            fullNameTextField.isHidden = true
+            fullNameLine.isHidden = true
+        } else {
+            loginType = .signUp
+            signInOrSignUpButton.setTitle("Sign Up", for: .normal)
+            fullNameTextField.isHidden = false
+            fullNameLine.isHidden = false
+
             changeUI()
         } else if sender.selectedSegmentIndex == 1 {
             loginType = .signUp
             changeUI()
+
         }
     }
     
     @IBAction func createAccountOrSignIn(_ sender: UIButton) {
-        guard let email = emailTextField.text,
-            let password = passwordTextField.text,
-            let fullName = fullNameTextField.text,
-            !email.isEmpty,
-            !password.isEmpty,
-            !fullName.isEmpty else { return }
-        
-        let user = UserRepresentation(email: email, password: password, fullName: fullName)
-        
-        if loginType == .signUp {
-            apiController.signUp(with: user, completion: { (error) in
-                if let error = error {
-                    NSLog("Error occurred during sign up: \(error.localizedDescription)")
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Sign Up Not Successful", message: "Please try again", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alert.addAction(okAction)
-                        self.present(alert, animated: true)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Sign Up Successful", message: "Now please sign in", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alert.addAction(okAction)
-                        self.present(alert, animated: true) {
-                            self.changeUI()
-                        }
-                    }
-                }
-            })
-        } else if loginType == .signIn {
-            apiController.login(with: user, completion: { (error) in
-                if let error = error {
-                    NSLog("Error occurred during login: \(error)")
-                } else {
-                    DispatchQueue.main.async {
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                }
-            })
+        if loginType == .signIn {
+            login()
+        } else {
+            register()
         }
     }
     
+    func register() {
+        guard let email = emailTextField.text,
+        let password = passwordTextField.text,
+        let fullName = fullNameTextField.text,
+        !email.isEmpty,
+        !password.isEmpty,
+        !fullName.isEmpty else { return }
+        
+        let user = UserRepresentation(email: email, password: password, fullName: fullName)
+        
+        apiController.signUp(with: user) { (error) in
+            if let error = error {
+                NSLog("Error signing up with:\(error)")
+            }
+            self.apiController.login(with: user) { (result) in
+                if (try? result.get()) != nil {
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    NSLog("Error logging in with:\(result)")
+                }
+            }
+        }
+    }
+    
+    func login() {
+        guard let email = emailTextField.text,
+        let password = passwordTextField.text,
+        !email.isEmpty,
+        !password.isEmpty else { return }
+        
+        let user = UserRepresentation(email: email, password: password, fullName: nil)
+        apiController.login(with: user) { (result) in
+            if (try? result.get()) != nil {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            } else {
+                NSLog("error logging in with:\(result)")
+            }
+
     func changeUI() {
         if self.loginType == .signIn {
             signInOrSignUpControl.selectedSegmentIndex = 0
@@ -122,6 +146,7 @@ class SignInViewController: UIViewController {
             self.fullNameTextField.isHidden = false
             self.fullNameLineBar.isHidden = false
             self.rememberMeLabel.text = "I have read all terms and conditions"
+
         }
     }
 }
@@ -142,4 +167,7 @@ extension SignInViewController: UITextFieldDelegate {
         }
     }
 }
+
+
+
 

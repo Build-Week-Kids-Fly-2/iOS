@@ -42,10 +42,28 @@
 		3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB12235FB86E00870B28 /* DatePickerViewController.swift */; };
 		3272DB152360B16600870B28 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB142360B16600870B28 /* User+Convenience.swift */; };
 		3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */; };
+		3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */; };
+		3272DB2823611EBA00870B28 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB2723611EBA00870B28 /* TripController.swift */; };
+		3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */; };
+		3272DB312361944C00870B28 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB302361944C00870B28 /* KeychainWrapper.swift */; };
+		3272DB332361FACF00870B28 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB322361FACF00870B28 /* Assistant.swift */; };
+		3272DB352361FCF300870B28 /* AssistantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB342361FCF300870B28 /* AssistantCollectionViewCell.swift */; };
+		3272DB372362051900870B28 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB362362051900870B28 /* DestinationTableViewCell.swift */; };
+		3272DB3923623D8C00870B28 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB3823623D8C00870B28 /* TimePickerViewController.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3272DB222360E5B200870B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320ACB12235E4991003D1BE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 320ACB19235E4991003D1BE4;
+			remoteInfo = "Kids Fly";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0580130B235E6C6D00BDC9A3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -87,6 +105,19 @@
 		3272DB12235FB86E00870B28 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3272DB142360B16600870B28 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kids FlyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids_FlyUITests.swift; sourceTree = "<group>"; };
+		3272DB212360E5B200870B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3272DB2723611EBA00870B28 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
+		3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 2.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 3.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2B2361876F00870B28 /* Trips 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 4.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		3272DB302361944C00870B28 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		3272DB322361FACF00870B28 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		3272DB342361FCF300870B28 /* AssistantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantCollectionViewCell.swift; sourceTree = "<group>"; };
+		3272DB362362051900870B28 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
+		3272DB3823623D8C00870B28 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +132,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3272DB1A2360E5B200870B28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB1C235E4991003D1BE4 /* Kids Fly */,
+				3272DB1E2360E5B200870B28 /* Kids FlyUITests */,
 				320ACB1B235E4991003D1BE4 /* Products */,
 				95FCE207C59BFD3E72D053EC /* Pods */,
 				EDA4CAF15112E8F17316A2BF /* Frameworks */,
@@ -118,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				320ACB1A235E4991003D1BE4 /* Kids Fly.app */,
+				3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,10 +198,12 @@
 				05801315235F713300BDC9A3 /* SignIn.storyboard */,
 				320ACB4B235F734A003D1BE4 /* SettingsMenu.storyboard */,
 				320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */,
-				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
-				0580132823612ED700BDC9A3 /* EmailSupport.storyboard */,
-				0580132C2361FDF700BDC9A3 /* Messages.storyboard */,
+
+				3272DB362362051900870B28 /* DestinationTableViewCell.swift */,
+				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
+				3272DB342361FCF300870B28 /* AssistantCollectionViewCell.swift */,
+
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,9 +211,9 @@
 		320ACB36235E49B9003D1BE4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
 				320ACB41235E5503003D1BE4 /* BookATripMainViewController.swift */,
 				320ACB45235E61CF003D1BE4 /* BookTripViewController.swift */,
-				0580130F235E6CF000BDC9A3 /* SignInViewController.swift */,
 				320ACB47235F625B003D1BE4 /* HireViewController.swift */,
 				320ACB49235F6C76003D1BE4 /* ReviewTripViewController.swift */,
 				320ACB4D235F76B3003D1BE4 /* SettingsViewController.swift */,
@@ -179,8 +221,9 @@
 				32E6743C235F98270081D236 /* FamilyPassportViewController.swift */,
 				32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */,
 				3272DB12235FB86E00870B28 /* DatePickerViewController.swift */,
-				0580132E236202A400BDC9A3 /* CheckingInViewController.swift */,
-				0580133023622FC700BDC9A3 /* EmailSupportViewController.swift */,
+
+				3272DB3823623D8C00870B28 /* TimePickerViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,8 +235,9 @@
 				0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */,
 				3272DB142360B16600870B28 /* User+Convenience.swift */,
 				0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */,
-				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
 				05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */,
+				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
+				3272DB322361FACF00870B28 /* Assistant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				05801317235F98CA00BDC9A3 /* APIController.swift */,
-				058013262360EB9000BDC9A3 /* TripController.swift */,
+				3272DB2723611EBA00870B28 /* TripController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -211,8 +255,19 @@
 			isa = PBXGroup;
 			children = (
 				3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */,
+				3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */,
+				3272DB302361944C00870B28 /* KeychainWrapper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3272DB1E2360E5B200870B28 /* Kids FlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */,
+				3272DB212360E5B200870B28 /* Info.plist */,
+			);
+			path = "Kids FlyUITests";
 			sourceTree = "<group>";
 		};
 		95FCE207C59BFD3E72D053EC /* Pods */ = {
@@ -254,6 +309,24 @@
 			productReference = 320ACB1A235E4991003D1BE4 /* Kids Fly.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3272DB1C2360E5B200870B28 /* Kids FlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3272DB242360E5B200870B28 /* Build configuration list for PBXNativeTarget "Kids FlyUITests" */;
+			buildPhases = (
+				3272DB192360E5B200870B28 /* Sources */,
+				3272DB1A2360E5B200870B28 /* Frameworks */,
+				3272DB1B2360E5B200870B28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3272DB232360E5B200870B28 /* PBXTargetDependency */,
+			);
+			name = "Kids FlyUITests";
+			productName = "Kids FlyUITests";
+			productReference = 3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +339,10 @@
 				TargetAttributes = {
 					320ACB19235E4991003D1BE4 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					3272DB1C2360E5B200870B28 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 320ACB19235E4991003D1BE4;
 					};
 				};
 			};
@@ -283,6 +360,7 @@
 			projectRoot = "";
 			targets = (
 				320ACB19235E4991003D1BE4 /* Kids Fly */,
+				3272DB1C2360E5B200870B28 /* Kids FlyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +382,13 @@
 				320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */,
 				05801316235F713300BDC9A3 /* SignIn.storyboard in Resources */,
 				320ACB3A235E4B64003D1BE4 /* Lato-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3272DB1B2360E5B200870B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +446,17 @@
 				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
 				0580132F236202A400BDC9A3 /* CheckingInViewController.swift in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
+				3272DB312361944C00870B28 /* KeychainWrapper.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
+				3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
+				3272DB332361FACF00870B28 /* Assistant.swift in Sources */,
+				3272DB352361FCF300870B28 /* AssistantCollectionViewCell.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
 				3272DB152360B16600870B28 /* User+Convenience.swift in Sources */,
 				05801310235E6CF000BDC9A3 /* SignInViewController.swift in Sources */,
+				3272DB372362051900870B28 /* DestinationTableViewCell.swift in Sources */,
 				320ACB52235F771B003D1BE4 /* EditProfileViewController.swift in Sources */,
 				0580130C235E6C6D00BDC9A3 /* CoreDataStack.swift in Sources */,
 				32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */,
@@ -374,17 +464,34 @@
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */,
 				3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */,
-				058013272360EB9000BDC9A3 /* TripController.swift in Sources */,
+				3272DB2823611EBA00870B28 /* TripController.swift in Sources */,
 				320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */,
 				320ACB4E235F76B3003D1BE4 /* SettingsViewController.swift in Sources */,
 				3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */,
 				320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */,
+				3272DB3923623D8C00870B28 /* TimePickerViewController.swift in Sources */,
 				05801321235FA53B00BDC9A3 /* Trip+Convenience.swift in Sources */,
 				320ACB46235E61CF003D1BE4 /* BookTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3272DB192360E5B200870B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3272DB232360E5B200870B28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 320ACB19235E4991003D1BE4 /* Kids Fly */;
+			targetProxy = 3272DB222360E5B200870B28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */ = {
@@ -558,6 +665,44 @@
 			};
 			name = Release;
 		};
+		3272DB252360E5B200870B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM84C6XKT7;
+				INFOPLIST_FILE = "Kids FlyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeconnerly.Kids-FlyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids Fly";
+			};
+			name = Debug;
+		};
+		3272DB262360E5B200870B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM84C6XKT7;
+				INFOPLIST_FILE = "Kids FlyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeconnerly.Kids-FlyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids Fly";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,15 +724,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3272DB242360E5B200870B28 /* Build configuration list for PBXNativeTarget "Kids FlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3272DB252360E5B200870B28 /* Debug */,
+				3272DB262360E5B200870B28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
 		0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3272DB2B2361876F00870B28 /* Trips 4.xcdatamodel */,
+				3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */,
+				3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */,
 				0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */,
 			);
-			currentVersion = 0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */;
+			currentVersion = 3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */;
 			path = Trips.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
