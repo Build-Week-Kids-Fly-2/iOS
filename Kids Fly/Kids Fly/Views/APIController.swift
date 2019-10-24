@@ -128,7 +128,7 @@ class APIController {
             
             do {
                 let bearer = try JSONDecoder().decode(Bearer.self, from: data)
-                self.token = UserDefaults.setTokenAs(token: bearer.token)
+                self.token = bearer.token
                 self.user = user
                 let moc = CoreDataStack.shared.mainContext
                 
@@ -137,6 +137,8 @@ class APIController {
                 }
                 try CoreDataStack.shared.save(context: moc)
                 if let token = self.token {
+                    print(token)
+                    KeychainWrapper.standard.set(token, forKey: "token")
                     completion(.success(token))
                 }
             } catch {

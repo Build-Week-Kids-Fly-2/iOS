@@ -40,6 +40,8 @@
 		3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */; };
 		3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */; };
 		3272DB2823611EBA00870B28 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB2723611EBA00870B28 /* TripController.swift */; };
+		3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */; };
+		3272DB312361944C00870B28 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB302361944C00870B28 /* KeychainWrapper.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
@@ -97,6 +99,9 @@
 		3272DB2723611EBA00870B28 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 2.xcdatamodel"; sourceTree = "<group>"; };
 		3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 3.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2B2361876F00870B28 /* Trips 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 4.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		3272DB302361944C00870B28 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */,
+				3272DB2E2361942D00870B28 /* KeychainItemAccessibility.swift */,
+				3272DB302361944C00870B28 /* KeychainWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -412,7 +419,9 @@
 				05801318235F98CA00BDC9A3 /* APIController.swift in Sources */,
 				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
+				3272DB312361944C00870B28 /* KeychainWrapper.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
+				3272DB2F2361942D00870B28 /* KeychainItemAccessibility.swift in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
 				320ACB44235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift in Sources */,
 				320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */,
@@ -698,6 +707,7 @@
 		0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3272DB2B2361876F00870B28 /* Trips 4.xcdatamodel */,
 				3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */,
 				3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */,
 				0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */,

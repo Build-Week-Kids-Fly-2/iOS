@@ -22,10 +22,12 @@
         <!--SignIn-->
         <scene sceneID="Q9E-hW-O4E">
             <objects>
-                <viewControllerPlaceholder storyboardName="SignIn" id="zHV-Fu-wOY" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SignIn" id="zHV-Fu-wOY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RrB-8W-fq8"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spr-cl-XJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2624" y="-422"/>
+            <point key="canvasLocation" x="3289" y="-448"/>
         </scene>
         <!--BookA Trip Main View Controller-->
         <scene sceneID="tne-QT-ifu">

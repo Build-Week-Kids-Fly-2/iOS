@@ -36,7 +36,7 @@ extension Trip {
             let children = tripRepresentation.children,
             let arrived = tripRepresentation.arrived,
             let enRoute = tripRepresentation.enRoute,
-            let identifier = tripRepresentation.identifier else { return }
+            let identifier = tripRepresentation.identifier else { return nil }
         
         self.init(airport: airport, airline: airline, flightNumber: flightNumber, departureTime: departureTime, carryOnBags: carryOnBags, checkedBags: checkedBags, children: children, arrived: arrived, enRoute: enRoute, identifier: identifier)
     }

@@ -19,10 +19,4 @@ extension UserDefaults {
         }
         return isFirstLaunch
     }
-    
-    static func setTokenAs(token: String) -> String {
-        let tokenKey = "tokenHasBeenSet"
-        UserDefaults.standard.set(token, forKey: tokenKey)
-    }
-    
 }

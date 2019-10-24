@@ -21,7 +21,7 @@ class TripController {
     func createTrip(airport: String, airline: String, flightNumber: String, departureTime: String, carryOnBags: Int32, checkedBags: Int32, children: Int32, arrived: Bool, enRoute: Bool) {
         let tripRepresentation = TripRepresentation(airport: airport, airline: airline, flightNumber: flightNumber, departureTime: departureTime, carryOnBags: carryOnBags, checkedBags: checkedBags, children: children, arrived: arrived, enRoute: enRoute, identifier: nil)
         
-        post(trip: tripRepresentation)
+        post(tripRepresentation: tripRepresentation)
     }
     
     //MARK: - Update Trip
@@ -66,11 +66,11 @@ class TripController {
     //MARK: - Fetch Trip From Server
     
     func fetchTripsFromServer(completion: @escaping () -> Void = {}) {
-        let token: String? = UserDefaults.standard.string(forKey: "tokenKey")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         let requestURL = baseURL.appendingPathComponent("user_trips")
         var request = URLRequest(url:requestURL)
-        request.httpMethod = HTTPMethod.post.rawValue
+        request.httpMethod = HTTPMethod.get.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
@@ -116,7 +116,7 @@ class TripController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let token: String? = UserDefaults.standard.string(forKey: "tokenKey")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
@@ -170,7 +170,7 @@ class TripController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let token: String? = UserDefaults.standard.string(forKey: "tokenKey")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
@@ -202,7 +202,7 @@ class TripController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.delete.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let token: String? = UserDefaults.standard.string(forKey: "tokenKey")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
