@@ -20,7 +20,7 @@ class BookATripMainViewController: UIViewController, NSFetchedResultsControllerD
     let tripController = TripController.shared
     var trip: Trip?
     var trips: [Trip]?
-    
+    let token: String? = KeychainWrapper.standard.string(forKey: "token")
     
     var user: UserRepresentation {
         let moc = CoreDataStack.shared.mainContext
@@ -36,6 +36,8 @@ class BookATripMainViewController: UIViewController, NSFetchedResultsControllerD
         }
         return UserRepresentation(email: nil, password: nil, fullName: nil)
     }
+    
+    //MARK: - Fetched Results Controller
     
     lazy var fetchedResultsController: NSFetchedResultsController<Trip> = {
         let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
@@ -58,8 +60,6 @@ class BookATripMainViewController: UIViewController, NSFetchedResultsControllerD
         self.trips = frc.fetchedObjects
         return frc
     }()
-    
-    let token: String? = KeychainWrapper.standard.string(forKey: "token")
     
     // MARK: - View LifeCycle
     
@@ -86,52 +86,36 @@ class BookATripMainViewController: UIViewController, NSFetchedResultsControllerD
         if token != nil {
             tripController.fetchTripsFromServer()
         }
-        
-        //collectionView.reloadData()
-        //collectionView.reloadInputViews()
-
     }
     
-    // MARK: - IBActions & Methods
-
-    
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "" {
+            guard let bookTripVC = segue.destination as? BookTripViewController else { return }
+        }
     }
-    */
     
     // MARK: NSFetchedResultsControllerDelegate
         private var itemChanges = [(type: NSFetchedResultsChangeType, indexPath: IndexPath?, newIndexPath: IndexPath?)]()
         
         func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-            var adjustedNewIndexPath = newIndexPath
-            var adjustedOldIndexPath = indexPath
+            
             
             switch type {
             case .insert:
                 guard let newIndexPath = newIndexPath else { return }
                 collectionView.insertItems(at: [newIndexPath])
-                adjustedNewIndexPath = IndexPath(item: newIndexPath.item, section: 0)
             case .delete:
                 guard let newIndexPath = newIndexPath else { return }
                 collectionView.deleteItems(at: [newIndexPath])
-                //adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 0)
             case .update:
                 guard let newIndexPath = newIndexPath,
                       let indexPath = indexPath else { return }
                 collectionView.moveItem(at: indexPath, to: newIndexPath)
-                //adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 0)
-                //adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 0)
             case .move:
                 guard let indexPath = indexPath else { return }
                 collectionView.reloadItems(at: [indexPath])
-                //adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 0)
-                //adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 0)
             @unknown default:
                 break
             }

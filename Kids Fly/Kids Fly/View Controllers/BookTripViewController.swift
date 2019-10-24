@@ -18,6 +18,9 @@ class BookTripViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
+    @IBOutlet weak var airlineTextField: UITextField!
+    
+    let tripController = TripController.shared
     
     let dropDownAirports = DropDown()
     let dropDownNumberOfTravelers = DropDown()
@@ -59,6 +62,7 @@ class BookTripViewController: UIViewController {
     }
     
     @IBAction func planTripButtonTapped(_ sender: Any) {
+        createNewTrip()
        }
     
     
@@ -69,8 +73,31 @@ class BookTripViewController: UIViewController {
             guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
             datePickerVC.delegate = self
         }
+        if segue.identifier == "" {
+            guard let HireVC = segue.destination as? HireViewController else { return }
+        }
     }
-
+    
+    func createNewTrip() {
+        //setup Airport
+        guard let serviceAirport = serviceAirportTextField.text else { return }
+        var airport = serviceAirport
+        airport.removeFirst(4)
+        
+        //setup number of Travelers
+        guard let numTravelersString = numberOfTravelersTextField.text,
+            let numberOfTravelers = Int(numTravelersString) else { return }
+        
+        //setup Departure Date and Time
+        guard let date = dateTextField.text,
+            let time = timeTextField.text else { return }
+        let departureTime = "\(date) at \(time)"
+        
+        guard let flightNumber = flightNumberTextField.text,
+            let airline = airlineTextField.text else { return }
+        
+        tripController.createTrip(airport: airport, airline: airline, flightNumber: flightNumber, departureTime: departureTime, carryOnBags: 0, checkedBags: 0, children: Int32(numberOfTravelers), arrived: false, enRoute: false)
+    }
 }
 
 extension BookTripViewController:UITextFieldDelegate {
