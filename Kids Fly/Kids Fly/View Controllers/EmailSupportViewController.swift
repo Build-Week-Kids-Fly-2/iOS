@@ -1,5 +1,5 @@
 //
-//  CheckingInViewController.swift
+//  EmailSupportViewController.swift
 //  Kids Fly
 //
 //  Created by Marc Jacques on 10/24/19.
@@ -8,16 +8,18 @@
 
 import UIKit
 
-class CheckingInViewController: UIViewController {
+class EmailSupportViewController: UIViewController {
 
-    @IBOutlet weak var bellButton: UIButton!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var checkInButton: UIButton!
-    @IBOutlet weak var greetTravelerLabel: UILabel!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var gotItButton: UIButton!
+     @IBOutlet weak var search: UISearchBar!
+    @IBOutlet weak var search2: UISearchBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleButton(button: checkInButton)
-
+        styleButton(button: gotItButton)
+        styleButton(button: sendButton)
         // Do any additional setup after loading the view.
     }
     
@@ -25,23 +27,31 @@ class CheckingInViewController: UIViewController {
            button.setTitleColor(.black, for: .normal)
            button.layer.cornerRadius = 10
        }
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-    }
     
-    @IBAction func checkInTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "ShowTripProgress", sender: self)
+
+    
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowMessageSentConfirmation", sender: self)
+    }
+   
+    @IBAction func bellButtonTapped(_ sender: UIButton) {
     }
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
     }
     
-    @IBAction func bellButtonTapped(_ sender: UIButton) {
+    @IBAction func bell2buttonTapped(_ sender: UIButton) {
     }
     
+    @IBAction func menu2Button(_ sender: UIButton) {
+    }
     
+    @IBAction func gotItButtonTapped(_ sender: UIButton) {
+    }
+
     
-    
-    
+   
     /*
     // MARK: - Navigation
 
