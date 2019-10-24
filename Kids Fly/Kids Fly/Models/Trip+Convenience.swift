@@ -1,10 +1,9 @@
-//
-//  Trip+Convenience.swift
-//  Kids Fly
-//
-//  Created by Marc Jacques on 10/22/19.
-//  Copyright © 2019 jake connerly. All rights reserved.
-//
+////
+////  Trip+Convenience.swift
+////  Kids Fly
+////
+////  Created by Marc Jacques on 10/22/19.
+////  Copyright © 2019 jake connerly. All rights reserved.
 
 import Foundation
 import CoreData
@@ -46,3 +45,4 @@ extension Trip {
     }
     
 }
+

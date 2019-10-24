@@ -59,3 +59,4 @@ struct TripRepresentation: Codable {
         return rhs != lhs
     }
 }
+

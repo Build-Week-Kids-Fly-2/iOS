@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var loginSignUpText: UILabel!
     @IBOutlet weak var signInOrSignUpControl: UISegmentedControl!
     @IBOutlet weak var fullNameTextField: UITextField!
+
     @IBOutlet weak var fullNameLine: UIImageView!
     
     
@@ -33,6 +34,9 @@ class SignInViewController: UIViewController {
     var loginType = LoginType.signUp
     
     // MARK: - View LifeCycle
+
+    @IBOutlet weak var fullNameLineBar: UIImageView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +50,15 @@ class SignInViewController: UIViewController {
     // MARK: - IBActions & Methods
     
     func styleButton(button: UIButton) {
+
+        button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 10
     }
     
     @IBAction func signUpOrSignIn1(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             loginType = .signIn
+
             signInOrSignUpButton.setTitle("Sign In", for: .normal)
             fullNameTextField.isHidden = true
             fullNameLine.isHidden = true
@@ -60,6 +67,12 @@ class SignInViewController: UIViewController {
             signInOrSignUpButton.setTitle("Sign Up", for: .normal)
             fullNameTextField.isHidden = false
             fullNameLine.isHidden = false
+
+            changeUI()
+        } else if sender.selectedSegmentIndex == 1 {
+            loginType = .signUp
+            changeUI()
+
         }
     }
     
@@ -112,6 +125,28 @@ class SignInViewController: UIViewController {
             } else {
                 NSLog("error logging in with:\(result)")
             }
+
+    func changeUI() {
+        if self.loginType == .signIn {
+            signInOrSignUpControl.selectedSegmentIndex = 0
+            self.loginSignUpText.text = "Enter your information below to Sign In with your email or your social accounts"
+            self.signInOrSignUpButton.setTitle("Sign In", for: .normal)
+            self.googleSignIn.titleLabel?.text = "Sign In with Google"
+            self.facebookSignIn.titleLabel?.text = "Sign In with Facebook"
+            self.fullNameTextField.isHidden = true
+            self.fullNameLineBar.isHidden = true
+            self.rememberMeLabel.text = "Remember me"
+        } else {
+            self.loginType = .signUp
+            signInOrSignUpControl.selectedSegmentIndex = 1
+            self.loginSignUpText.text = "Enter your information below to Sign Up with your email or your social accounts"
+            self.signInOrSignUpButton.setTitle("Sign Up", for: .normal)
+            self.googleSignIn.titleLabel?.text = "Sign Up with Google"
+            self.facebookSignIn.titleLabel?.text = "Sign Up with FaceBook"
+            self.fullNameTextField.isHidden = false
+            self.fullNameLineBar.isHidden = false
+            self.rememberMeLabel.text = "I have read all terms and conditions"
+
         }
     }
 }
