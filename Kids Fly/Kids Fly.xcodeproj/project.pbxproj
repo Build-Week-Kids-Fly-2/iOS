@@ -39,6 +39,7 @@
 		3272DB152360B16600870B28 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB142360B16600870B28 /* User+Convenience.swift */; };
 		3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB172360BD0400870B28 /* UserDefaultsHelper.swift */; };
 		3272DB202360E5B200870B28 /* Kids_FlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */; };
+		3272DB2823611EBA00870B28 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272DB2723611EBA00870B28 /* TripController.swift */; };
 		32E6743D235F98270081D236 /* FamilyPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743C235F98270081D236 /* FamilyPassportViewController.swift */; };
 		32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */; };
 		92F75F13E0F0D24C1BDCAA91 /* Pods_Kids_Fly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */; };
@@ -93,6 +94,9 @@
 		3272DB1D2360E5B200870B28 /* Kids FlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kids FlyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3272DB1F2360E5B200870B28 /* Kids_FlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids_FlyUITests.swift; sourceTree = "<group>"; };
 		3272DB212360E5B200870B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3272DB2723611EBA00870B28 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
+		3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 2.xcdatamodel"; sourceTree = "<group>"; };
+		3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Trips 3.xcdatamodel"; sourceTree = "<group>"; };
 		32E6743C235F98270081D236 /* FamilyPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPassportViewController.swift; sourceTree = "<group>"; };
 		32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		6DCA0B05BF7883B92D2E4BD3 /* Pods-Kids Fly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.debug.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,8 +207,8 @@
 				0580130D235E6CAE00BDC9A3 /* UserRepresentation.swift */,
 				3272DB142360B16600870B28 /* User+Convenience.swift */,
 				0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */,
-				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
 				05801320235FA53B00BDC9A3 /* Trip+Convenience.swift */,
+				05801322235FAC3100BDC9A3 /* TripRepresentation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				05801317235F98CA00BDC9A3 /* APIController.swift */,
-				058013262360EB9000BDC9A3 /* TripController.swift */,
+				3272DB2723611EBA00870B28 /* TripController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -420,7 +424,7 @@
 				320ACB42235E5503003D1BE4 /* BookATripMainViewController.swift in Sources */,
 				320ACB48235F625B003D1BE4 /* HireViewController.swift in Sources */,
 				3272DB13235FB86E00870B28 /* DatePickerViewController.swift in Sources */,
-				058013272360EB9000BDC9A3 /* TripController.swift in Sources */,
+				3272DB2823611EBA00870B28 /* TripController.swift in Sources */,
 				320ACB4A235F6C76003D1BE4 /* ReviewTripViewController.swift in Sources */,
 				320ACB4E235F76B3003D1BE4 /* SettingsViewController.swift in Sources */,
 				3272DB182360BD0400870B28 /* UserDefaultsHelper.swift in Sources */,
@@ -694,9 +698,11 @@
 		0580131D235FA3F600BDC9A3 /* Trips.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */,
+				3272DB2923611F8500870B28 /* Trips 2.xcdatamodel */,
 				0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */,
 			);
-			currentVersion = 0580131E235FA3F600BDC9A3 /* Trips.xcdatamodel */;
+			currentVersion = 3272DB2A236158F800870B28 /* Trips 3.xcdatamodel */;
 			path = Trips.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

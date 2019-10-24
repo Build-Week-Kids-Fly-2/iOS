@@ -128,7 +128,7 @@ class APIController {
             
             do {
                 let bearer = try JSONDecoder().decode(Bearer.self, from: data)
-                self.token = bearer.token
+                self.token = UserDefaults.setTokenAs(token: bearer.token)
                 self.user = user
                 let moc = CoreDataStack.shared.mainContext
                 

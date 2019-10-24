@@ -9,8 +9,7 @@
 import Foundation
 
 extension UserDefaults {
-    // check for is first launch - only true on first invocation after app install, false on all further invocations
-    // Note: Store this value in AppDelegate if you have multiple places where you are checking for this flag
+    
     static func isFirstLaunch() -> Bool {
         let hasBeenLaunchedBeforeFlag = "hasBeenLaunchedBeforeFlag"
         let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasBeenLaunchedBeforeFlag)
@@ -20,4 +19,10 @@ extension UserDefaults {
         }
         return isFirstLaunch
     }
+    
+    static func setTokenAs(token: String) -> String {
+        let tokenKey = "tokenHasBeenSet"
+        UserDefaults.standard.set(token, forKey: tokenKey)
+    }
+    
 }
