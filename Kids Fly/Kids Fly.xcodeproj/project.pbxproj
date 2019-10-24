@@ -17,6 +17,7 @@
 		05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05801322235FAC3100BDC9A3 /* TripRepresentation.swift */; };
 		05801325235FF60100BDC9A3 /* CheckingIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05801324235FF60100BDC9A3 /* CheckingIn.storyboard */; };
 		058013272360EB9000BDC9A3 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058013262360EB9000BDC9A3 /* TripController.swift */; };
+		0580132923612ED700BDC9A3 /* EmailSupport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0580132823612ED700BDC9A3 /* EmailSupport.storyboard */; };
 		320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1D235E4991003D1BE4 /* AppDelegate.swift */; };
 		320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */; };
 		320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */; };
@@ -54,6 +55,7 @@
 		05801322235FAC3100BDC9A3 /* TripRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepresentation.swift; sourceTree = "<group>"; };
 		05801324235FF60100BDC9A3 /* CheckingIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckingIn.storyboard; sourceTree = "<group>"; };
 		058013262360EB9000BDC9A3 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripController.swift; path = "Kids Fly/Views/TripController.swift"; sourceTree = SOURCE_ROOT; };
+		0580132823612ED700BDC9A3 /* EmailSupport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailSupport.storyboard; sourceTree = "<group>"; };
 		18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_Fly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF28BEDC9A90C8C1DA3E11 /* Pods-Kids Fly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.release.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.release.xcconfig"; sourceTree = "<group>"; };
 		320ACB1A235E4991003D1BE4 /* Kids Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				320ACB4F235F7704003D1BE4 /* EditProfile.storyboard */,
 				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
+				0580132823612ED700BDC9A3 /* EmailSupport.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0580132923612ED700BDC9A3 /* EmailSupport.storyboard in Resources */,
 				320ACB3C235E4B72003D1BE4 /* Lato-Light.ttf in Resources */,
 				320ACB3E235E4B7D003D1BE4 /* Lato-Bold.ttf in Resources */,
 				320ACB2D235E4992003D1BE4 /* LaunchScreen.storyboard in Resources */,
