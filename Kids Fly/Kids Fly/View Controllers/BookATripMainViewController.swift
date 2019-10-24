@@ -9,11 +9,11 @@
 import UIKit
 import CoreData
 
-class BookATripMainViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class BookATripMainViewController: UIViewController {
     
     // MARK: - IBOutlets & Properties
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var hiUserLabel: UILabel!
     
@@ -87,95 +87,74 @@ class BookATripMainViewController: UIViewController, NSFetchedResultsControllerD
             tripController.fetchTripsFromServer()
         }
     }
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
-            guard let bookTripVC = segue.destination as? BookTripViewController else { return }
-        }
-    }
-    
-    // MARK: NSFetchedResultsControllerDelegate
-        private var itemChanges = [(type: NSFetchedResultsChangeType, indexPath: IndexPath?, newIndexPath: IndexPath?)]()
-        
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-            
-            
-            switch type {
-            case .insert:
-                guard let newIndexPath = newIndexPath else { return }
-                collectionView.insertItems(at: [newIndexPath])
-            case .delete:
-                guard let newIndexPath = newIndexPath else { return }
-                collectionView.deleteItems(at: [newIndexPath])
-            case .update:
-                guard let newIndexPath = newIndexPath,
-                      let indexPath = indexPath else { return }
-                collectionView.moveItem(at: indexPath, to: newIndexPath)
-            case .move:
-                guard let indexPath = indexPath else { return }
-                collectionView.reloadItems(at: [indexPath])
-            @unknown default:
-                break
-            }
-            
-            itemChanges.append((type: type, indexPath: indexPath, newIndexPath: newIndexPath))
-        }
-        
-        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
-        {
-            
-            if collectionView.numberOfItems(inSection: 0) == 0 {
-                collectionView.reloadData()
-            }
-                // Makes sure labels are *always* updated in the first collectionView cell
-                //self.collectionView.reloadItems(at: [IndexPath(item: 0, section: 0)])
-                
-            collectionView?.performBatchUpdates({
-                for change in self.itemChanges {
-                    switch change.type {
-                        
-                    case .insert: self.collectionView?.insertItems(at: [change.newIndexPath!])
-                    case .delete: self.collectionView?.deleteItems(at: [change.indexPath!])
-                    case .update: self.collectionView?.reloadItems(at: [change.indexPath!])
-                    case .move:
-                        self.collectionView?.deleteItems(at: [change.indexPath!])
-                        self.collectionView?.insertItems(at: [change.newIndexPath!])
-                    @unknown default:
-                        fatalError()
-                    }
-                }
-                
-    //            self.sectionChanges.removeAll()
-                self.itemChanges.removeAll()
-                
-            }, completion: { finished in
-                // moved section and item changes from here
-            })
-        }
 }
 
 // MARK: - Extensions
 
-extension BookATripMainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+extension BookATripMainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[0].numberOfObjects ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DestinationCell", for: indexPath) as? DestinationCollectionViewCell else { return UICollectionViewCell() }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DestinationCell", for: indexPath) as? DestinationTableViewCell else { return UITableViewCell() }
         let trip = fetchedResultsController.object(at: indexPath)
         cell.trip = trip
         return cell
     }
 }
 
-
+extension BookATripMainViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+        
+        switch type {
+            
+        case .insert:
+            guard let newIndexPath = newIndexPath else { return }
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .delete:
+            guard let indexPath = indexPath else { return }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        case .move:
+            guard let indexPath = indexPath,
+                let newIndexPath = newIndexPath else { return }
+            tableView.moveRow(at: indexPath, to: newIndexPath)
+        case .update:
+            guard let indexPath = indexPath else { return }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        @unknown default:
+            fatalError()
+        }
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange sectionInfo: NSFetchedResultsSectionInfo,
+                    atSectionIndex sectionIndex: Int,
+                    for type: NSFetchedResultsChangeType) {
+        
+        let sectionIndexSet = IndexSet(integer: sectionIndex)
+        
+        switch type {
+        case .insert:
+            tableView.insertSections(sectionIndexSet, with: .automatic)
+        case .delete:
+            tableView.deleteSections(sectionIndexSet, with: .automatic)
+        default:
+            break
+        }
+    }
+}
 
 
