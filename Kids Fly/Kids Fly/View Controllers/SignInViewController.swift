@@ -29,6 +29,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var loginSignUpText: UILabel!
     @IBOutlet weak var signInOrSignUpControl: UISegmentedControl!
     @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var fullNameLineBar: UIImageView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +45,16 @@ class SignInViewController: UIViewController {
     
     func styleButton(button: UIButton) {
         button.setTitleColor(.black, for: .normal)
-        button.layer.cornerRadius = 25
-        button.layer.borderWidth = 3
+        button.layer.cornerRadius = 10
     }
     
     @IBAction func signUpOrSignIn1(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             loginType = .signIn
+            changeUI()
         } else if sender.selectedSegmentIndex == 1 {
             loginType = .signUp
+            changeUI()
         }
     }
     
@@ -106,6 +110,8 @@ class SignInViewController: UIViewController {
             self.googleSignIn.titleLabel?.text = "Sign In with Google"
             self.facebookSignIn.titleLabel?.text = "Sign In with Facebook"
             self.fullNameTextField.isHidden = true
+            self.fullNameLineBar.isHidden = true
+            self.rememberMeLabel.text = "Remember me"
         } else {
             self.loginType = .signUp
             signInOrSignUpControl.selectedSegmentIndex = 1
@@ -113,6 +119,9 @@ class SignInViewController: UIViewController {
             self.signInOrSignUpButton.setTitle("Sign Up", for: .normal)
             self.googleSignIn.titleLabel?.text = "Sign Up with Google"
             self.facebookSignIn.titleLabel?.text = "Sign Up with FaceBook"
+            self.fullNameTextField.isHidden = false
+            self.fullNameLineBar.isHidden = false
+            self.rememberMeLabel.text = "I have read all terms and conditions"
         }
     }
 }

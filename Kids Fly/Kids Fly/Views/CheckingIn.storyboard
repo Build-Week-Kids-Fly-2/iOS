@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Checking In View Controller-->
         <scene sceneID="qaE-hZ-f0A">
             <objects>
-                <viewController id="Jqp-aw-d2j" sceneMemberID="viewController">
+                <viewController id="Jqp-aw-d2j" customClass="CheckingInViewController" customModule="Kids_Fly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZZ-bR-UUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oXw-8P-Oq7" kind="modal" id="c3h-Fu-qPy"/>
+                                    <segue destination="oXw-8P-Oq7" kind="show" identifier="ShowTripProgress" id="c3h-Fu-qPy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,10 +230,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SJ1-5w-h9X"/>
                     </view>
+                    <navigationItem key="navigationItem" id="STw-1O-Z5t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJB-P2-WRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-80"/>
+            <point key="canvasLocation" x="74" y="611"/>
         </scene>
     </scenes>
     <resources>
