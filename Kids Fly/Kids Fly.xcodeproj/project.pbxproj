@@ -18,6 +18,9 @@
 		05801325235FF60100BDC9A3 /* CheckingIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05801324235FF60100BDC9A3 /* CheckingIn.storyboard */; };
 		058013272360EB9000BDC9A3 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058013262360EB9000BDC9A3 /* TripController.swift */; };
 		0580132923612ED700BDC9A3 /* EmailSupport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0580132823612ED700BDC9A3 /* EmailSupport.storyboard */; };
+		0580132B2361F17600BDC9A3 /* EditingTrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0580132A2361F17600BDC9A3 /* EditingTrip.storyboard */; };
+		0580132D2361FDF700BDC9A3 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0580132C2361FDF700BDC9A3 /* Messages.storyboard */; };
+		0580132F236202A400BDC9A3 /* CheckingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580132E236202A400BDC9A3 /* CheckingInViewController.swift */; };
 		320ACB1E235E4991003D1BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1D235E4991003D1BE4 /* AppDelegate.swift */; };
 		320ACB20235E4991003D1BE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320ACB1F235E4991003D1BE4 /* SceneDelegate.swift */; };
 		320ACB25235E4991003D1BE4 /* BookATripMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320ACB23235E4991003D1BE4 /* BookATripMain.storyboard */; };
@@ -56,6 +59,9 @@
 		05801324235FF60100BDC9A3 /* CheckingIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckingIn.storyboard; sourceTree = "<group>"; };
 		058013262360EB9000BDC9A3 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripController.swift; path = "Kids Fly/Views/TripController.swift"; sourceTree = SOURCE_ROOT; };
 		0580132823612ED700BDC9A3 /* EmailSupport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailSupport.storyboard; sourceTree = "<group>"; };
+		0580132A2361F17600BDC9A3 /* EditingTrip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditingTrip.storyboard; sourceTree = "<group>"; };
+		0580132C2361FDF700BDC9A3 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		0580132E236202A400BDC9A3 /* CheckingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingInViewController.swift; sourceTree = "<group>"; };
 		18D72BDA8F67CA58D1C1EB68 /* Pods_Kids_Fly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_Fly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF28BEDC9A90C8C1DA3E11 /* Pods-Kids Fly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids Fly.release.xcconfig"; path = "Target Support Files/Pods-Kids Fly/Pods-Kids Fly.release.xcconfig"; sourceTree = "<group>"; };
 		320ACB1A235E4991003D1BE4 /* Kids Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +161,8 @@
 				320ACB43235E5C4C003D1BE4 /* DestinationCollectionViewCell.swift */,
 				05801324235FF60100BDC9A3 /* CheckingIn.storyboard */,
 				0580132823612ED700BDC9A3 /* EmailSupport.storyboard */,
+				0580132A2361F17600BDC9A3 /* EditingTrip.storyboard */,
+				0580132C2361FDF700BDC9A3 /* Messages.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				32E6743C235F98270081D236 /* FamilyPassportViewController.swift */,
 				32E6743E235F98500081D236 /* AddFamilyMemberViewController.swift */,
 				3272DB12235FB86E00870B28 /* DatePickerViewController.swift */,
+				0580132E236202A400BDC9A3 /* CheckingInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -287,6 +296,8 @@
 				320ACB3C235E4B72003D1BE4 /* Lato-Light.ttf in Resources */,
 				320ACB3E235E4B7D003D1BE4 /* Lato-Bold.ttf in Resources */,
 				320ACB2D235E4992003D1BE4 /* LaunchScreen.storyboard in Resources */,
+				0580132B2361F17600BDC9A3 /* EditingTrip.storyboard in Resources */,
+				0580132D2361FDF700BDC9A3 /* Messages.storyboard in Resources */,
 				320ACB4C235F734A003D1BE4 /* SettingsMenu.storyboard in Resources */,
 				320ACB50235F7704003D1BE4 /* EditProfile.storyboard in Resources */,
 				05801325235FF60100BDC9A3 /* CheckingIn.storyboard in Resources */,
@@ -349,6 +360,7 @@
 				05801323235FAC3100BDC9A3 /* TripRepresentation.swift in Sources */,
 				05801318235F98CA00BDC9A3 /* APIController.swift in Sources */,
 				32E6743F235F98500081D236 /* AddFamilyMemberViewController.swift in Sources */,
+				0580132F236202A400BDC9A3 /* CheckingInViewController.swift in Sources */,
 				0580130E235E6CAE00BDC9A3 /* UserRepresentation.swift in Sources */,
 				0580131F235FA3F600BDC9A3 /* Trips.xcdatamodeld in Sources */,
 				320ACB40235E517A003D1BE4 /* CustomColors.swift in Sources */,
